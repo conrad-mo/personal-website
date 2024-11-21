@@ -19,6 +19,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
 	}

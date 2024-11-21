@@ -7,15 +7,23 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-	:global(html) {
+	:global(html, body) {
 		font-family: 'Inter', sans-serif;
 		color: var(--foreground);
 		background: var(--background);
 		font-family: Arial, Helvetica, sans-serif;
+		height: 100%;
 	}
-	:global(body) {
+	:global(*) {
 		margin: 0;
 		padding: 0;
+		box-sizing: border-box;
+	}
+	:global(h2) {
+		color: var(--tx-2);
+	}
+	:global(h3) {
+		color: var(--tx-3);
 	}
 	:root {
 		--background: rgb(255, 252, 240);
