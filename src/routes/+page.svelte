@@ -12,6 +12,11 @@
 </div>
 <div class="projects">
 	<h1>Projects</h1>
+	<Project
+		name="UTSC Geoguessr"
+		description="A game built with python and tkinter that aims to help new students learn the campus. Submission for HTV 7"
+		photo="utscgeoguessr.jpg"
+	/>
 </div>
 
 <style>
