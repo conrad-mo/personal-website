@@ -1,15 +1,13 @@
 <script></script>
 
-<main>
-	<div class="main">
-		<h1>Software Engineer</h1>
-		<p>
-			Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
-			playing the piano are my two main passions. Music, in particular, holds a special place in my
-			heart, allowing me to express myself in unique ways.
-		</p>
-	</div>
-</main>
+<div class="main">
+	<h1>Software Engineer</h1>
+	<p>
+		Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
+		playing the piano are my two main passions. Music, in particular, holds a special place in my
+		heart, allowing me to express myself in unique ways.
+	</p>
+</div>
 
 <style>
 	:root {
@@ -21,7 +19,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		/* gap: 1rem; */
 		padding-left: 8rem;
 		padding-right: 8rem;
 	}

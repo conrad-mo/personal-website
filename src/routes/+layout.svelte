@@ -13,6 +13,10 @@
 		background: var(--background);
 		font-family: Arial, Helvetica, sans-serif;
 	}
+	:global(body) {
+		margin: 0;
+		padding: 0;
+	}
 	:root {
 		--background: rgb(255, 252, 240);
 		--foreground: rgb(16, 15, 15);
