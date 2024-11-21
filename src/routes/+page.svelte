@@ -1,4 +1,6 @@
-<script></script>
+<script>
+	import { Project } from '$lib/components';
+</script>
 
 <div class="main">
 	<h1>Software Engineer</h1>
