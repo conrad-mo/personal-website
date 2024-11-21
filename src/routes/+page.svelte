@@ -16,6 +16,7 @@
 		name="UTSC Geoguessr"
 		description="A game built with python and tkinter that aims to help new students learn the campus. Submission for HTV 7"
 		photo="utscgeoguessr.jpg"
+		link="https://github.com/conrad-mo/geoguesser-utsc"
 	/>
 </div>
 
@@ -41,7 +42,7 @@
 	.main p {
 		font-size: 1.5rem;
 		line-height: 2rem;
-		font-weight: 300;
+		font-weight: 100;
 		width: 50%;
 	}
 	.projects {
