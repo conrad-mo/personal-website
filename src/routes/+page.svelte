@@ -8,6 +8,9 @@
 		heart, allowing me to express myself in unique ways.
 	</p>
 </div>
+<div class="projects">
+	<h1>Projects</h1>
+</div>
 
 <style>
 	:root {
@@ -33,5 +36,19 @@
 		line-height: 2rem;
 		font-weight: 300;
 		width: 50%;
+	}
+	.projects {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 4rem;
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+	.projects h1 {
+		font-size: 3rem;
+		line-height: 1;
+		font-weight: 400;
 	}
 </style>
