@@ -17,12 +17,13 @@
 		outline: none;
 		border-radius: 0.75rem;
 		padding: 0.75rem;
-		width: fit-content;
-		max-width: 40%;
+		margin: -0.75rem;
+		max-width: 24rem;
 		transition: background-color 0.3s ease;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		box-sizing: border-box;
 	}
 	a:hover {
 		background-color: var(--hover-background);
