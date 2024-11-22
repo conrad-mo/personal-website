@@ -27,6 +27,43 @@
 			photo="retina"
 			link="https://github.com/CherylZ4/Retina"
 		/>
+		<Project
+			name="Viridian"
+			description="A mobile app for iOS and Android that allows users to talk
+                    to each other"
+			photo="viridian"
+			link="https://github.com/conrad-mo/viridian"
+		/>
+		<Project
+			name="Speech Summarizer"
+			description="A mobile app that summarizes long meetings into short
+                    meeting summaries. Winner of Best Mobile Hack at Ignition
+                    Hacks 2023"
+			photo="speechsummarizer"
+			link="https://github.com/eveev26/SpeechSummarizer"
+		/>
+		<Project
+			name="Personal Website"
+			description="A website to display myself, skills and projects"
+			photo="website"
+			link="https://github.com/conrad-mo/personal-website"
+		/>
+		<Project
+			name="Eventful"
+			description="A mobile app that generates items given an event and
+                    optimizes costs of the items for the event. Ranked 14th out
+                    of 80 projects at HTV8"
+			photo="eventful"
+			link="https://github.com/conrad-mo/Eventful"
+		/>
+		<Project
+			name="WisdomWhisperer"
+			description="A web app that allows students to upload lecture videos to
+                    summarize, generate quiz questions, and ask a chatbot for
+                    help. Winner of the Student Challenge at NewHacks2023"
+			photo="wisdomwhisperer"
+			link="https://github.com/rtutz/NewHacks2023-WisdomWhisperer"
+		/>
 	</div>
 </div>
 
@@ -67,7 +104,7 @@
 	.project-list {
 		display: flex;
 		gap: 1.5rem;
-		/* flex-wrap: wrap; */
+		flex-wrap: wrap;
 	}
 	.projects h1 {
 		font-size: 3rem;

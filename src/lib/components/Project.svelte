@@ -30,7 +30,8 @@
 		outline: none;
 		border-radius: 0.75rem;
 		padding: 0.75rem;
-		margin: -0.75rem;
+		margin-left: -0.75rem;
+		margin-right: -0.75rem;
 		max-width: 24rem;
 		transition: background-color 0.3s ease;
 		display: flex;
