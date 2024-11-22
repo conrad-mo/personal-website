@@ -138,7 +138,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		/* align-items: center; */
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
@@ -151,7 +150,6 @@
 	}
 	.project-list {
 		display: flex;
-		justify-content: center;
 		gap: 1.5rem;
 		flex-wrap: wrap;
 	}
