@@ -13,13 +13,20 @@
 </div>
 <div class="experience">
 	<h1>Experiences</h1>
-	<div>
+	<div class="experience-list">
 		<Experience
 			position="Software Engineer"
 			name="Northern Labs"
-			description="Canadian Blockchain startup. Worked on a proprietary newspaper paywall that processes transactions on the blockchain"
+			description="Canadian blockchain startup. Worked on a proprietary newspaper paywall that processes transactions on the blockchain"
 			active={activeExp}
 			photo="/experiences/northernlabs.svg"
+		/>
+		<Experience
+			position="Web Developer"
+			name="Hack the Valley"
+			description="Canada's second largest hackathon"
+			active={activeExp}
+			photo="/experiences/htv.svg"
 		/>
 	</div>
 </div>
@@ -116,15 +123,22 @@
 		padding-right: 8rem;
 	}
 	.experience h1 {
-		font-size: 4rem;
+		font-size: 4.5rem;
 		line-height: 1;
 		font-weight: 400;
+	}
+	.experience-list {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		width: 100%;
 	}
 	.projects {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		/* align-items: center; */
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
@@ -137,6 +151,7 @@
 	}
 	.project-list {
 		display: flex;
+		justify-content: center;
 		gap: 1.5rem;
 		flex-wrap: wrap;
 	}

@@ -16,9 +16,12 @@
 		background-color: var(--exp-background);
 		display: flex;
 		justify-content: center;
+		width: 25%;
 	}
 	img {
-		width: 50%;
+		height: auto;
+		max-width: 50%;
+		min-width: 50%;
 	}
 	:root {
 		--exp-background: rgb(242, 240, 229);
