@@ -109,7 +109,7 @@
 	.main p {
 		font-size: 1.5rem;
 		line-height: 2rem;
-		font-weight: 100;
+		font-weight: 300;
 		width: 50%;
 	}
 	.experience {

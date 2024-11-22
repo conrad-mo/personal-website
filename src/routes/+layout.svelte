@@ -5,13 +5,17 @@
 {@render children()}
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+	@font-face {
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 100 900;
+		font-display: swap;
+		src: url('$lib/assets/fonts/InterVariable.woff2') format('woff2');
+	}
 	:global(html, body) {
 		font-family: 'Inter', sans-serif;
 		color: var(--foreground);
 		background: var(--background);
-		font-family: Arial, Helvetica, sans-serif;
 		height: 100%;
 	}
 	:global(*) {

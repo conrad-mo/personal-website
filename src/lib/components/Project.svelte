@@ -48,14 +48,14 @@
 		width: 100%;
 	}
 	h1 {
-		font-weight: 300;
+		font-weight: 400;
 		font-size: 1.125rem;
 		line-height: 1.75rem;
 	}
 	h2 {
 		font-size: 0.875rem;
 		line-height: 1.25rem;
-		font-weight: 100;
+		font-weight: 300;
 	}
 	:root {
 		--hover-background: rgb(230, 228, 217);
