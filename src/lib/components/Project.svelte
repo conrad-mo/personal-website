@@ -1,9 +1,26 @@
 <script>
-	const { name, description, photo, link } = $props();
+	// @ts-nocheck
+
+	const { name, description, photo, link, phototwo } = $props();
+
+	// Import all images eagerly
+	const imageModules = import.meta.glob(
+		`$lib/assets/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}`,
+		{
+			eager: true,
+			query: { enhanced: true }
+		}
+	);
+	const filteredImages = Object.entries(imageModules).filter(([path]) => {
+		const fileName = path.split('/').pop(); // Get the last segment of the path
+		return fileName.startsWith(phototwo); // Check if it starts with `photo`
+	});
 </script>
 
 <a href={link} target="_blank" rel="noopener noreferrer">
-	<img src={photo} alt="name" />
+	{#each filteredImages as [_path, module]}
+		<enhanced:img src={module.default} alt="some alt text" />
+	{/each}
 	<div>
 		<h1>{name}</h1>
 		<h2>{description}</h2>

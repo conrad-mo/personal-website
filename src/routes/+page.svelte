@@ -12,12 +12,24 @@
 </div>
 <div class="projects">
 	<h1>Projects</h1>
-	<Project
-		name="UTSC Geoguessr"
-		description="A game built with python and tkinter that aims to help new students learn the campus. Submission for HTV 7"
-		photo="utscgeoguessr.jpg"
-		link="https://github.com/conrad-mo/geoguesser-utsc"
-	/>
+	<div class="project-list">
+		<Project
+			name="UTSC Geoguessr"
+			description="A game built with python and tkinter that aims to help new students learn the campus. Submission for HTV 7"
+			photo="utscgeoguessr.jpg"
+			link="https://github.com/conrad-mo/geoguesser-utsc"
+			phototwo="utscgeoguessr"
+		/>
+		<Project
+			name="Retina"
+			description="A desktop app that focuses on helping people explore their
+                    surroudings by providing definitions of objects around them.
+                    Submission for UoftHacksX"
+			photo="retina.png"
+			link="https://github.com/CherylZ4/Retina"
+			phototwo="retina"
+		/>
+	</div>
 </div>
 
 <style>
@@ -53,6 +65,11 @@
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
+	}
+	.project-list {
+		display: flex;
+		gap: 1.5rem;
+		/* flex-wrap: wrap; */
 	}
 	.projects h1 {
 		font-size: 3rem;
