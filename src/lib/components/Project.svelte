@@ -32,7 +32,7 @@
 		padding: 0.75rem;
 		margin-left: -0.75rem;
 		margin-right: -0.75rem;
-		max-width: 22rem;
+		max-width: 21rem;
 		transition: background-color 0.3s ease;
 		display: flex;
 		flex-direction: column;
