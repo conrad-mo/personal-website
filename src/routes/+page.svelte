@@ -16,18 +16,16 @@
 		<Project
 			name="UTSC Geoguessr"
 			description="A game built with python and tkinter that aims to help new students learn the campus. Submission for HTV 7"
-			photo="utscgeoguessr.jpg"
+			photo="utscgeoguessr"
 			link="https://github.com/conrad-mo/geoguesser-utsc"
-			phototwo="utscgeoguessr"
 		/>
 		<Project
 			name="Retina"
 			description="A desktop app that focuses on helping people explore their
                     surroudings by providing definitions of objects around them.
                     Submission for UoftHacksX"
-			photo="retina.png"
+			photo="retina"
 			link="https://github.com/CherylZ4/Retina"
-			phototwo="retina"
 		/>
 	</div>
 </div>

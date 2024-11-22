@@ -1,9 +1,8 @@
 <script>
 	// @ts-nocheck
 
-	const { name, description, photo, link, phototwo } = $props();
+	const { name, description, photo, link } = $props();
 
-	// Import all images eagerly
 	const imageModules = import.meta.glob(
 		`$lib/assets/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}`,
 		{
@@ -11,16 +10,13 @@
 			query: { enhanced: true }
 		}
 	);
-	const filteredImages = Object.entries(imageModules).filter(([path]) => {
-		const fileName = path.split('/').pop(); // Get the last segment of the path
-		return fileName.startsWith(phototwo); // Check if it starts with `photo`
-	});
+	const selectedImage = Object.entries(imageModules).find(([path]) =>
+		path.split('/').pop().startsWith(photo)
+	)?.[1].default;
 </script>
 
 <a href={link} target="_blank" rel="noopener noreferrer">
-	{#each filteredImages as [_path, module]}
-		<enhanced:img src={module.default} alt="some alt text" />
-	{/each}
+	<enhanced:img src={selectedImage} alt={name} />
 	<div>
 		<h1>{name}</h1>
 		<h2>{description}</h2>
