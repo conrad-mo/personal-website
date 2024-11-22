@@ -1,15 +1,31 @@
 <script>
-	const { position, name, description, active } = $props();
+	const { position, name, description, photo, active } = $props();
 </script>
 
 <main>
-	<h1>{position} @ {name}</h1>
+	<img src={photo} alt={name} />
 </main>
 
 <style>
 	main {
-		outline-style: solid;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		border-radius: 0.5rem;
+		background-color: var(--exp-background);
+		display: flex;
+		justify-content: center;
 	}
-	h1 {
+	img {
+		width: 50%;
+	}
+	:root {
+		--exp-background: rgb(242, 240, 229);
+	}
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--exp-background: rgb(28, 27, 26);
+		}
 	}
 </style>

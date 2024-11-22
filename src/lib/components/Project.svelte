@@ -4,7 +4,7 @@
 	const { name, description, photo, link } = $props();
 
 	const imageModules = import.meta.glob(
-		`$lib/assets/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}`,
+		`$lib/assets/projects/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}`,
 		{
 			eager: true,
 			query: { enhanced: true }

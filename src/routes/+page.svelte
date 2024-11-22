@@ -12,13 +12,14 @@
 	</p>
 </div>
 <div class="experience">
-	<h1>Experience</h1>
+	<h1>Experiences</h1>
 	<div>
 		<Experience
 			position="Software Engineer"
 			name="Northern Labs"
 			description="Canadian Blockchain startup. Worked on a proprietary newspaper paywall that processes transactions on the blockchain"
 			active={activeExp}
+			photo="/experiences/northernlabs.svg"
 		/>
 	</div>
 </div>
@@ -109,12 +110,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
 	}
 	.experience h1 {
-		font-size: 3rem;
+		font-size: 4rem;
 		line-height: 1;
 		font-weight: 400;
 	}
