@@ -1,5 +1,6 @@
 <script>
-	import { Project } from '$lib/components';
+	import { Project, Experience } from '$lib/components';
+	let activeExp = $state('Northern Labs');
 </script>
 
 <div class="main">
@@ -9,6 +10,17 @@
 		playing the piano are my two main passions. Music, in particular, holds a special place in my
 		heart, allowing me to express myself in unique ways.
 	</p>
+</div>
+<div class="experience">
+	<h1>Experience</h1>
+	<div>
+		<Experience
+			position="Software Engineer"
+			name="Northern Labs"
+			description="Canadian Blockchain startup. Worked on a proprietary newspaper paywall that processes transactions on the blockchain"
+			active={activeExp}
+		/>
+	</div>
 </div>
 <div class="projects">
 	<h1>Projects</h1>
@@ -92,6 +104,20 @@
 		font-weight: 100;
 		width: 50%;
 	}
+	.experience {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 4rem;
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+	.experience h1 {
+		font-size: 3rem;
+		line-height: 1;
+		font-weight: 400;
+	}
 	.projects {
 		min-height: 100vh;
 		display: flex;
@@ -101,14 +127,15 @@
 		padding-left: 8rem;
 		padding-right: 8rem;
 	}
+	.projects h1 {
+		padding-top: 4rem;
+		font-size: 3rem;
+		line-height: 1;
+		font-weight: 400;
+	}
 	.project-list {
 		display: flex;
 		gap: 1.5rem;
 		flex-wrap: wrap;
-	}
-	.projects h1 {
-		font-size: 3rem;
-		line-height: 1;
-		font-weight: 400;
 	}
 </style>
