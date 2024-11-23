@@ -175,12 +175,12 @@
 			--exp-sides: 4rem;
 			--home-sides: 1.5rem;
 		}
-	}
-	.experience-list {
-		flex-direction: column;
-	}
-	.experience h1 {
-		font-size: 2.5rem;
+		.experience-list {
+			flex-direction: column;
+		}
+		.experience h1 {
+			font-size: 2.5rem;
+		}
 	}
 	@media (min-width: 640px) {
 		:root {
