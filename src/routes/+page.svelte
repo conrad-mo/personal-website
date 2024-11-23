@@ -6,10 +6,8 @@
 <div class="home">
 	<h1>Software Engineer</h1>
 	<div>
-		<p>
-			Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
-			playing the piano are my two main passions.
-		</p>
+		<p>Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
+		<p>Coding and playing the piano are my two main passions.</p>
 		<p>
 			Music, in particular, holds a special place in my heart, allowing me to express myself in
 			unique ways.
