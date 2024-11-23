@@ -2,6 +2,16 @@
 	let { children } = $props();
 </script>
 
+<svelte:head>
+	<link
+		rel="preload"
+		href="$lib/assets/fonts/InterVariable.woff2"
+		as="font"
+		type="font/woff2"
+		crossorigin="anonymous"
+	/>
+</svelte:head>
+
 {@render children()}
 
 <style>
@@ -9,7 +19,7 @@
 		font-family: Inter;
 		font-style: normal;
 		font-weight: 100 900;
-		/* font-display: swap; */
+		font-display: swap;
 		src: url('$lib/assets/fonts/InterVariable.woff2') format('woff2');
 	}
 	:global(html, body) {
