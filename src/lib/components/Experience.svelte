@@ -19,6 +19,7 @@
 		width: 100%;
 	}
 	img {
+		max-height: 200px;
 		height: auto;
 		max-width: 40%;
 	}
