@@ -5,11 +5,16 @@
 
 <div class="home">
 	<h1>Software Engineer</h1>
-	<p>
-		Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
-		playing the piano are my two main passions. Music, in particular, holds a special place in my
-		heart, allowing me to express myself in unique ways.
-	</p>
+	<div>
+		<p>
+			Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
+			playing the piano are my two main passions.
+		</p>
+		<p>
+			Music, in particular, holds a special place in my heart, allowing me to express myself in
+			unique ways.
+		</p>
+	</div>
 </div>
 <div class="experience">
 	<h1>Experiences</h1>
