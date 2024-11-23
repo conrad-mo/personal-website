@@ -122,8 +122,8 @@
 		justify-content: center;
 		align-items: center;
 		gap: 4rem;
-		padding-left: 8rem;
-		padding-right: 8rem;
+		padding-left: var(--exp-sides);
+		padding-right: var(--exp-sides);
 		border-bottom-width: 0.1rem;
 		border-bottom-style: solid;
 		border-color: var(--tx-3);
@@ -144,9 +144,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		gap: 4rem;
-		padding-left: 8rem;
-		padding-right: 8rem;
+		padding-left: var(--proj-sides);
+		padding-right: var(--proj-sides);
 		border-bottom-width: 0.1rem;
 		border-bottom-style: solid;
 		border-color: var(--tx-3);
@@ -159,7 +160,73 @@
 	}
 	.project-list {
 		display: flex;
+		justify-content: center;
 		gap: 1.5rem;
 		flex-wrap: wrap;
+	}
+	@media (max-width: 499px) {
+		:root {
+			--exp-sides: 3rem;
+		}
+	}
+	@media (max-width: 639px) {
+		:root {
+			--exp-sides: 4rem;
+		}
+		.experience-list {
+			flex-direction: column;
+		}
+		.experience h1 {
+			font-size: 2.5rem;
+			line-height: 1;
+			font-weight: 300;
+		}
+	}
+	@media (min-width: 640px) {
+		:root {
+			--exp-sides: 2rem;
+			--proj-sides: 8rem;
+		}
+	}
+	@media (min-width: 768px) {
+		:root {
+			--exp-sides: 7rem;
+		}
+	}
+	@media (min-width: 900px) {
+		:root {
+			--exp-sides: 10rem;
+		}
+	}
+	@media (min-width: 1024px) {
+		:root {
+			--exp-sides: 15rem;
+		}
+		.projects {
+			align-items: start;
+		}
+	}
+	@media (min-width: 1280px) {
+		:root {
+			--exp-sides: 20rem;
+		}
+	}
+	@media (min-width: 1536px) {
+		:root {
+			--exp-sides: 24rem;
+		}
+	}
+	@media (min-width: 1804px) {
+		:root {
+			--exp-sides: 32rem;
+		}
+		.project-list {
+			justify-content: start;
+		}
+	}
+	@media (min-width: 2000px) {
+		:root {
+			--exp-sides: 40rem;
+		}
 	}
 </style>
