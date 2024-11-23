@@ -20,8 +20,9 @@
 	}
 	img {
 		max-height: 200px;
+		max-width: 200px;
 		height: auto;
-		max-width: 40%;
+		width: 40%;
 	}
 	:root {
 		--exp-background: rgb(242, 240, 229);
