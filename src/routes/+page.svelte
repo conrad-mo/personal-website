@@ -97,23 +97,24 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 4rem;
-		padding-left: 8rem;
-		padding-right: 8rem;
+		gap: 2rem;
+		padding-left: var(--home-sides);
+		padding-right: var(--home-sides);
 		border-bottom-width: 0.1rem;
 		border-bottom-style: solid;
 		border-color: var(--tx-3);
 	}
 	.home h1 {
-		font-size: 6rem;
+		font-size: 2.5rem;
 		line-height: 1;
 		font-weight: 400;
+		width: fit-content;
 	}
 	.home p {
-		font-size: 1.5rem;
+		font-size: 1rem;
 		line-height: 2rem;
 		font-weight: 300;
-		width: 50%;
+		width: 100%;
 	}
 	.experience {
 		min-height: 100vh;
@@ -172,25 +173,37 @@
 	@media (max-width: 639px) {
 		:root {
 			--exp-sides: 4rem;
+			--home-sides: 1.5rem;
 		}
-		.experience-list {
-			flex-direction: column;
-		}
-		.experience h1 {
-			font-size: 2.5rem;
-			line-height: 1;
-			font-weight: 300;
-		}
+	}
+	.experience-list {
+		flex-direction: column;
+	}
+	.experience h1 {
+		font-size: 2.5rem;
 	}
 	@media (min-width: 640px) {
 		:root {
 			--exp-sides: 2rem;
 			--proj-sides: 8rem;
+			--home-sides: 8rem;
+		}
+		.home {
+			gap: 4rem;
+		}
+		.home h1 {
+			font-size: 3rem;
+		}
+		.home p {
+			font-size: 1.5rem;
 		}
 	}
 	@media (min-width: 768px) {
 		:root {
 			--exp-sides: 7rem;
+		}
+		.home h1 {
+			font-size: 4rem;
 		}
 	}
 	@media (min-width: 900px) {
@@ -204,6 +217,12 @@
 		}
 		.projects {
 			align-items: start;
+		}
+		.home h1 {
+			font-size: 6rem;
+		}
+		.home p {
+			width: 70%;
 		}
 	}
 	@media (min-width: 1280px) {
@@ -222,6 +241,9 @@
 		}
 		.project-list {
 			justify-content: start;
+		}
+		.home p {
+			width: 50%;
 		}
 	}
 	@media (min-width: 2000px) {
