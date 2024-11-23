@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	<img src={photo} alt={name} />
+	<img loading="lazy" src={photo} alt={name} />
 </main>
 
 <style>
