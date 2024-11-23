@@ -3,7 +3,7 @@
 	let activeExp = $state('Northern Labs');
 </script>
 
-<div class="main">
+<div class="home">
 	<h1>Software Engineer</h1>
 	<p>
 		Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
@@ -92,7 +92,7 @@
 		display: flex;
 		flex-direction: column;
 	}
-	.main {
+	.home {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -100,13 +100,16 @@
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
+		border-bottom-width: 0.1rem;
+		border-bottom-style: solid;
+		border-color: var(--tx-3);
 	}
-	.main h1 {
+	.home h1 {
 		font-size: 6rem;
 		line-height: 1;
 		font-weight: 400;
 	}
-	.main p {
+	.home p {
 		font-size: 1.5rem;
 		line-height: 2rem;
 		font-weight: 300;
@@ -121,11 +124,14 @@
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
+		border-bottom-width: 0.1rem;
+		border-bottom-style: solid;
+		border-color: var(--tx-3);
 	}
 	.experience h1 {
 		font-size: 4.5rem;
 		line-height: 1;
-		font-weight: 400;
+		font-weight: 300;
 	}
 	.experience-list {
 		display: flex;
@@ -141,12 +147,15 @@
 		gap: 4rem;
 		padding-left: 8rem;
 		padding-right: 8rem;
+		border-bottom-width: 0.1rem;
+		border-bottom-style: solid;
+		border-color: var(--tx-3);
 	}
 	.projects h1 {
 		padding-top: 4rem;
 		font-size: 3rem;
 		line-height: 1;
-		font-weight: 400;
+		font-weight: 300;
 	}
 	.project-list {
 		display: flex;
