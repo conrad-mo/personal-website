@@ -130,10 +130,14 @@
 	.drawer button {
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
+		-webkit-backdrop-filter: blur(15px);
+		backdrop-filter: blur(15px);
 	}
 	.drawer .socials button {
 		padding-top: 0.25rem;
 		padding-bottom: 0;
+		-webkit-backdrop-filter: blur(15px);
+		backdrop-filter: blur(15px);
 	}
 	.desktop {
 		align-items: center;

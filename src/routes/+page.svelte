@@ -26,7 +26,7 @@
 			><h1 transition:fly={{ y: 200, duration: 500 }}>Software Engineer</h1>
 			<h1 transition:fly={{ y: 200, duration: 500 }}>Fullstack Developer</h1>
 			<h1 transition:fly={{ y: 200, duration: 500 }}>DevOps Engineer</h1>
-			<h1 transition:fly={{ y: 200, duration: 500 }}>Pianist</h1>
+			<h1 transition:fly={{ y: 200, duration: 500 }}>Pianist 🎹</h1>
 		</Typewriter>
 		<p transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
 			👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.
@@ -35,6 +35,16 @@
 </div>
 <!-- <div use:scrollRef={'about'} class="about">
 	<h1>About me</h1>
+	<p>
+		Coding and playing the piano are my two main passions. Music, in particular, holds a special
+		place in my heart, allowing me to express myself in unique ways.
+	</p>
+	<p>
+		When I&apos;m not immersed in the world of music and coding, I enjoy dining out with friends and
+		exploring Toronto&apos;s diverse culinary offerings. Food is a wonderful way to connect, but my
+		true love is the piano. If you&apos;re as passionate about music and enjoy good company,
+		let&apos;s connect and share our stories!
+	</p>
 </div> -->
 <div
 	use:scrollRef={'experience'}
