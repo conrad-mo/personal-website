@@ -5,18 +5,20 @@
 	import Typewriter from 'svelte-typewriter';
 	import { fly } from 'svelte/transition';
 	import { inview } from 'svelte-inview';
-	import type { ObserverEventDetails } from 'svelte-inview';
-	let isInView: boolean;
 	let homeVisible = $state(false);
-	$effect(() => {
-		homeVisible = true;
-	});
 </script>
 
 <div class="nav">
 	<Navbar />
 </div>
-<div use:scrollRef={'home'} class="home">
+<div
+	use:scrollRef={'home'}
+	class="home"
+	use:inview
+	oninview_enter={() => {
+		homeVisible = true;
+	}}
+>
 	<Typewriter mode="loop"
 		><h1 transition:fly={{ y: 200, duration: 500 }}>Software Engineer</h1>
 		<h1 transition:fly={{ y: 200, duration: 500 }}>Fullstack Developer</h1>
@@ -24,13 +26,7 @@
 		<h1 transition:fly={{ y: 200, duration: 500 }}>Pianist</h1>
 	</Typewriter>
 	{#if homeVisible}
-		<p
-			use:inview
-			transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}
-			oninview_enter={() => {
-				homeVisible = true;
-			}}
-		>
+		<p transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
 			👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.
 		</p>
 	{/if}
