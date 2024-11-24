@@ -26,28 +26,28 @@
 		</button>
 	</div>
 	{#if isDrawerOpen}
-		<div transition:slide={{ y: -200, duration: 250 }} class="drawer">
-			<button use:scrollTo={'home'}>Home</button>
-			<button use:scrollTo={'experience'}>Experience</button>
-			<button use:scrollTo={'projects'}>Projects</button>
+		<div transition:slide={{ y: -200, duration: 100 }} class="drawer">
+			<button use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
+			<button use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button>
+			<button use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
 			<div class="socials">
 				<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
-					<button>
+					<button onclick={toggleDrawer}>
 						<Resume />
 					</button>
 				</a>
 				<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
-					<button>
+					<button onclick={toggleDrawer}>
 						<Instagram />
 					</button>
 				</a>
 				<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
-					<button>
+					<button onclick={toggleDrawer}>
 						<Linkedin />
 					</button>
 				</a>
 				<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
-					<button>
+					<button onclick={toggleDrawer}>
 						<Github />
 					</button>
 				</a>
