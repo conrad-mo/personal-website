@@ -9,7 +9,7 @@
 </div>
 <div use:scrollRef={'home'} class="home">
 	<h1>Software Engineer</h1>
-	<p>Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
+	<p>👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
 </div>
 <div use:scrollRef={'experience'} class="experience">
 	<h1>Experiences</h1>

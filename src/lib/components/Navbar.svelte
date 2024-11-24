@@ -10,18 +10,26 @@
 
 <main>
 	<div class="socials">
-		<button>
-			<Resume />
-		</button>
-		<button>
-			<Instagram />
-		</button>
-		<button>
-			<Linkedin />
-		</button>
-		<button>
-			<Github />
-		</button>
+		<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
+			<button>
+				<Resume />
+			</button>
+		</a>
+		<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
+			<button>
+				<Instagram />
+			</button>
+		</a>
+		<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
+			<button>
+				<Linkedin />
+			</button>
+		</a>
+		<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
+			<button>
+				<Github />
+			</button>
+		</a>
 	</div>
 	<div class="sections">
 		<button use:scrollTo={'home'}>Home</button>
@@ -75,6 +83,11 @@
 	}
 	.sections button {
 		padding-bottom: 0.25rem;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+		outline: none;
 	}
 	:root {
 		--nav-background: rgb(242, 240, 229, 0.5);
