@@ -32,7 +32,6 @@
 	},
 	"dependencies": {
 		"@iconify-json/mdi": "^1.2.1",
-		"motion": "^11.11.17",
 		"svelte-scrolling": "^1.5.0",
 		"svelte-typewriter": "^3.2.3",
 		"unplugin-icons": "^0.20.1"
