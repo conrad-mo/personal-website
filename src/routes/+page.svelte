@@ -3,6 +3,7 @@
 	let activeExp = $state('Northern Labs');
 	import { scrollRef } from 'svelte-scrolling';
 	import Typewriter from 'svelte-typewriter';
+	import { fly } from 'svelte/transition';
 </script>
 
 <div class="nav">
@@ -10,12 +11,14 @@
 </div>
 <div use:scrollRef={'home'} class="home">
 	<Typewriter mode="loop"
-		><h1>Software Engineer</h1>
-		<h1>Fullstack Developer</h1>
-		<h1>DevOps Engineer</h1>
-		<h1>Pianist</h1>
+		><h1 transition:fly={{ y: 200, duration: 500 }}>Software Engineer</h1>
+		<h1 transition:fly={{ y: 200, duration: 500 }}>Fullstack Developer</h1>
+		<h1 transition:fly={{ y: 200, duration: 500 }}>DevOps Engineer</h1>
+		<h1 transition:fly={{ y: 200, duration: 500 }}>Pianist</h1>
 	</Typewriter>
-	<p>👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
+	<p transition:fly={{ delay: 3000, y: 200, opacity: 0, duration: 1000 }}>
+		👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.
+	</p>
 </div>
 <div use:scrollRef={'experience'} class="experience">
 	<h1>Experiences</h1>
