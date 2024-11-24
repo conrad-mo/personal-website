@@ -3,6 +3,23 @@
 	let activeExp = $state('Northern Labs');
 	import { scrollRef } from 'svelte-scrolling';
 	import Typewriter from 'svelte-typewriter';
+	import { animate, inView, stagger } from 'motion';
+	$effect(() => {
+		inView('.home', (info) => {
+			animate(
+				'.home-element',
+				{ opacity: [0, 1], y: [50, 0] },
+				{ delay: stagger(0.2), duration: 0.5, ease: 'easeIn' }
+			);
+		});
+		inView('.experience', (info) => {
+			animate(
+				'.experience-element',
+				{ opacity: [0, 1], y: [50, 0] },
+				{ delay: stagger(0.2), duration: 0.5, ease: 'easeIn' }
+			);
+		});
+	});
 </script>
 
 <div class="nav">
@@ -10,16 +27,18 @@
 </div>
 <div use:scrollRef={'home'} class="home">
 	<Typewriter mode="loop"
-		><h1>Software Engineer</h1>
+		><h1 class="home-element">Software Engineer</h1>
 		<h1>Fullstack Developer</h1>
 		<h1>DevOps Engineer</h1>
 		<h1>Pianist</h1>
 	</Typewriter>
-	<p>👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
+	<p class="home-element">
+		👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.
+	</p>
 </div>
 <div use:scrollRef={'experience'} class="experience">
-	<h1>Experiences</h1>
-	<div class="experience-list">
+	<h1 class="experience-element">Experiences</h1>
+	<div class="experience-list experience-element">
 		<Experience
 			position="Software Engineer"
 			name="Northern Labs"
