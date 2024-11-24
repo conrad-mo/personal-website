@@ -6,6 +6,7 @@
 	import Github from '~icons/mdi/github';
 	import Resume from '~icons/mdi/resume';
 	import Menu from '~icons/mdi/menu';
+	import Close from '~icons/mdi/close';
 	import { scrollTo } from 'svelte-scrolling';
 	let isDrawerOpen = $state(false);
 	function toggleDrawer() {
@@ -16,7 +17,11 @@
 <main>
 	<div class="menu-button">
 		<button onclick={toggleDrawer}>
-			<Menu />
+			{#if isDrawerOpen}
+				<Close />
+			{:else}
+				<Menu />
+			{/if}
 		</button>
 	</div>
 	{#if isDrawerOpen}
@@ -96,7 +101,7 @@
 	}
 	.menu-button {
 		justify-content: end;
-		padding-right: 1rem;
+		padding-right: 0.5rem;
 	}
 	.drawer {
 		margin-top: 0.5rem;
@@ -114,6 +119,11 @@
 	}
 	button:hover {
 		background-color: var(--tx-3);
+	}
+	.menu-button button {
+		padding-top: 0.25rem;
+		padding-right: 0.5rem;
+		padding-left: 0.5rem;
 	}
 	.drawer button {
 		padding-top: 0.5rem;
