@@ -26,31 +26,33 @@
 		</button>
 	</div>
 	{#if isDrawerOpen}
-		<div class="drawer">
-			<button use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
-			<button use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button>
-			<button use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
-			<div class="socials">
-				<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
-					<button onclick={toggleDrawer}>
-						<Resume />
-					</button>
-				</a>
-				<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
-					<button onclick={toggleDrawer}>
-						<Instagram />
-					</button>
-				</a>
-				<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
-					<button onclick={toggleDrawer}>
-						<Linkedin />
-					</button>
-				</a>
-				<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
-					<button onclick={toggleDrawer}>
-						<Github />
-					</button>
-				</a>
+		<div transition:slide={{ y: -200, duration: 100 }}>
+			<div class="drawer">
+				<button use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
+				<button use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button>
+				<button use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
+				<div class="socials">
+					<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
+						<button onclick={toggleDrawer}>
+							<Resume />
+						</button>
+					</a>
+					<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
+						<button onclick={toggleDrawer}>
+							<Instagram />
+						</button>
+					</a>
+					<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
+						<button onclick={toggleDrawer}>
+							<Linkedin />
+						</button>
+					</a>
+					<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
+						<button onclick={toggleDrawer}>
+							<Github />
+						</button>
+					</a>
+				</div>
 			</div>
 		</div>
 	{/if}
