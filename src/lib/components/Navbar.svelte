@@ -5,45 +5,86 @@
 	import Linkedin from '~icons/mdi/linkedin';
 	import Github from '~icons/mdi/github';
 	import Resume from '~icons/mdi/resume';
+	import Menu from '~icons/mdi/menu';
 	import { scrollTo } from 'svelte-scrolling';
+	let isDrawerOpen = $state(false);
+	function toggleDrawer() {
+		isDrawerOpen = !isDrawerOpen;
+	}
 </script>
 
 <main>
-	<div class="socials">
-		<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
-			<button>
-				<Resume />
-			</button>
-		</a>
-		<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
-			<button>
-				<Instagram />
-			</button>
-		</a>
-		<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
-			<button>
-				<Linkedin />
-			</button>
-		</a>
-		<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
-			<button>
-				<Github />
-			</button>
-		</a>
+	<div class="menu-button">
+		<button onclick={toggleDrawer}>
+			<Menu />
+		</button>
 	</div>
-	<div class="sections">
-		<button use:scrollTo={'home'}>Home</button>
-		<button use:scrollTo={'experience'}>Experience</button>
-		<button use:scrollTo={'projects'}>Projects</button>
+	{#if isDrawerOpen}
+		<div class="drawer">
+			<button use:scrollTo={'home'}>Home</button>
+			<button use:scrollTo={'experience'}>Experience</button>
+			<button use:scrollTo={'projects'}>Projects</button>
+			<div class="socials">
+				<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
+					<button>
+						<Resume />
+					</button>
+				</a>
+				<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
+					<button>
+						<Instagram />
+					</button>
+				</a>
+				<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
+					<button>
+						<Linkedin />
+					</button>
+				</a>
+				<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
+					<button>
+						<Github />
+					</button>
+				</a>
+			</div>
+		</div>
+	{/if}
+	<div class="desktop">
+		<div class="socials">
+			<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
+				<button>
+					<Resume />
+				</button>
+			</a>
+			<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
+				<button>
+					<Instagram />
+				</button>
+			</a>
+			<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
+				<button>
+					<Linkedin />
+				</button>
+			</a>
+			<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
+				<button>
+					<Github />
+				</button>
+			</a>
+		</div>
+		<div class="sections">
+			<button use:scrollTo={'home'}>Home</button>
+			<button use:scrollTo={'experience'}>Experience</button>
+			<button use:scrollTo={'projects'}>Projects</button>
+		</div>
 	</div>
 </main>
 
 <style>
-	main {
+	.menu-button,
+	.desktop,
+	.drawer {
 		background-color: var(--nav-background);
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
 		transform: translateY(1rem);
 		margin-left: 1rem;
 		margin-right: 1rem;
@@ -52,6 +93,39 @@
 		border-radius: 0.375rem;
 		backdrop-filter: blur(15px);
 		-webkit-backdrop-filter: blur(10px);
+	}
+	.menu-button {
+		justify-content: end;
+		padding-right: 1rem;
+	}
+	.drawer {
+		margin-top: 0.5rem;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	button {
+		all: unset;
+		display: inline-block;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		border-radius: 0.375rem;
+	}
+	button:hover {
+		background-color: var(--tx-3);
+	}
+	.drawer button {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+	.drawer .socials button {
+		padding-top: 0.25rem;
+		padding-bottom: 0;
+	}
+	.desktop {
+		align-items: center;
+		justify-content: space-between;
 		z-index: 1;
 	}
 	.socials {
@@ -64,24 +138,14 @@
 		gap: 0.5rem;
 		margin-right: 1rem;
 	}
-	button {
-		all: unset;
-		display: inline-block;
-		cursor: pointer;
+	.desktop button {
 		padding-top: 0.25rem;
-		padding-left: 0.75rem;
-		padding-right: 0.75rem;
-		border-radius: 0.375rem;
-		transition: background-color 0.3s ease;
 	}
-	button:hover {
-		background-color: var(--tx-3);
-	}
-	.socials button {
+	.desktop .socials button {
 		padding-left: 0.5rem;
 		padding-right: 0.5rem;
 	}
-	.sections button {
+	.desktop .sections button {
 		padding-bottom: 0.25rem;
 	}
 	a {
@@ -95,6 +159,19 @@
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--nav-background: rgb(40, 39, 38, 0.5);
+		}
+	}
+	@media (max-width: 768px) {
+		.desktop {
+			display: none;
+		}
+	}
+	@media (min-width: 769px) {
+		.menu-button {
+			display: none;
+		}
+		.drawer {
+			display: none;
 		}
 	}
 </style>
