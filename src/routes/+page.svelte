@@ -1,17 +1,17 @@
 <script>
-	import { Project, Experience } from '$lib/components';
+	import { Project, Experience, Navbar } from '$lib/components';
 	let activeExp = $state('Northern Labs');
+	import { scrollRef } from 'svelte-scrolling';
 </script>
 
-<div class="home">
-	<h1>Software Engineer</h1>
-	<p>
-		Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto. Coding and
-		playing the piano are my two main passions. Music, in particular, holds a special place in my
-		heart, allowing me to express myself in unique ways.
-	</p>
+<div class="nav">
+	<Navbar />
 </div>
-<div class="experience">
+<div use:scrollRef={'home'} class="home">
+	<h1>Software Engineer</h1>
+	<p>Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
+</div>
+<div use:scrollRef={'experience'} class="experience">
 	<h1>Experiences</h1>
 	<div class="experience-list">
 		<Experience
@@ -30,7 +30,7 @@
 		/>
 	</div>
 </div>
-<div class="projects">
+<div use:scrollRef={'projects'} class="projects">
 	<h1>Projects</h1>
 	<div class="project-list">
 		<Project
@@ -91,6 +91,13 @@
 	:root {
 		display: flex;
 		flex-direction: column;
+	}
+	.nav {
+		max-height: 0;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		z-index: 1;
 	}
 	.home {
 		min-height: 100vh;
