@@ -109,6 +109,8 @@
 		margin-top: 0.5rem;
 		flex-direction: column;
 		gap: 0.5rem;
+		-webkit-backdrop-filter: blur(15px);
+		backdrop-filter: blur(15px);
 	}
 	button {
 		all: unset;
@@ -180,6 +182,10 @@
 	@media (max-width: 768px) {
 		.desktop {
 			display: none;
+		}
+		.drawer {
+			-webkit-backdrop-filter: blur(15px);
+			backdrop-filter: blur(15px);
 		}
 	}
 	@media (min-width: 769px) {
