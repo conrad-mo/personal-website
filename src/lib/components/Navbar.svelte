@@ -9,7 +9,6 @@
 	import Close from '~icons/mdi/close';
 	import { scrollTo } from 'svelte-scrolling';
 	import { slide } from 'svelte/transition';
-	import { cubicInOut } from 'svelte/easing';
 	let isDrawerOpen = $state(false);
 	function toggleDrawer() {
 		isDrawerOpen = !isDrawerOpen;
@@ -27,7 +26,7 @@
 		</button>
 	</div>
 	{#if isDrawerOpen}
-		<div transition:slide={{ y: -200, duration: 250, easing: cubicInOut }} class="drawer">
+		<div transition:slide={{ y: -200, duration: 250 }} class="drawer">
 			<button use:scrollTo={'home'}>Home</button>
 			<button use:scrollTo={'experience'}>Experience</button>
 			<button use:scrollTo={'projects'}>Projects</button>
