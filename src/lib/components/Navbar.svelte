@@ -100,6 +100,7 @@
 		-webkit-backdrop-filter: blur(10px);
 	}
 	.menu-button {
+		touch-action: manipulation;
 		justify-content: end;
 		padding-right: 0.5rem;
 	}
