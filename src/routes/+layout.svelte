@@ -34,6 +34,8 @@
 		--foreground: rgb(16, 15, 15);
 		--tx-2: rgb(111, 110, 105);
 		--tx-3: rgb(183, 181, 172);
+		--cursor-width: 5px;
+		--cursor-color: rgb(16, 15, 15);
 	}
 	@media (prefers-color-scheme: dark) {
 		:root {
@@ -41,6 +43,8 @@
 			--foreground: rgb(206, 205, 195);
 			--tx-2: rgb(135, 133, 128);
 			--tx-3: rgb(87, 86, 83);
+			--cursor-width: 5px;
+			--cursor-color: rgb(206, 205, 195);
 		}
 	}
 </style>

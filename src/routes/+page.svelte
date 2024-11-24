@@ -2,13 +2,19 @@
 	import { Project, Experience, Navbar } from '$lib/components';
 	let activeExp = $state('Northern Labs');
 	import { scrollRef } from 'svelte-scrolling';
+	import Typewriter from 'svelte-typewriter';
 </script>
 
 <div class="nav">
 	<Navbar />
 </div>
 <div use:scrollRef={'home'} class="home">
-	<h1>Software Engineer</h1>
+	<Typewriter mode="loop"
+		><h1>Software Engineer</h1>
+		<h1>Fullstack Developer</h1>
+		<h1>DevOps Engineer</h1>
+		<h1>Pianist</h1>
+	</Typewriter>
 	<p>👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.</p>
 </div>
 <div use:scrollRef={'experience'} class="experience">
@@ -112,6 +118,7 @@
 		border-color: var(--tx-3);
 	}
 	.home h1 {
+		white-space: nowrap;
 		font-size: 2.5rem;
 		line-height: 1;
 		font-weight: 400;
@@ -196,7 +203,7 @@
 			--home-sides: 8rem;
 		}
 		.home {
-			gap: 4rem;
+			gap: 3rem;
 		}
 		.home h1 {
 			font-size: 3rem;
