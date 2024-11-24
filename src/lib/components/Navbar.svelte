@@ -111,6 +111,7 @@
 		gap: 0.5rem;
 		-webkit-backdrop-filter: blur(15px);
 		backdrop-filter: blur(15px);
+		background-color: var(--nav-background);
 	}
 	button {
 		all: unset;
@@ -186,6 +187,7 @@
 		.drawer {
 			-webkit-backdrop-filter: blur(15px);
 			backdrop-filter: blur(15px);
+			background-color: var(--nav-background);
 		}
 	}
 	@media (min-width: 769px) {
