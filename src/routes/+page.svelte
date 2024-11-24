@@ -33,9 +33,9 @@
 		</p>
 	{/if}
 </div>
-<div use:scrollRef={'about'} class="about">
+<!-- <div use:scrollRef={'about'} class="about">
 	<h1>About me</h1>
-</div>
+</div> -->
 <div
 	use:scrollRef={'experience'}
 	class="experience"
