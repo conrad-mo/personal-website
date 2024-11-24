@@ -33,6 +33,9 @@
 		</p>
 	{/if}
 </div>
+<div use:scrollRef={'about'} class="about">
+	<h1>About me</h1>
+</div>
 <div
 	use:scrollRef={'experience'}
 	class="experience"
@@ -139,22 +142,36 @@
 		width: 100%;
 		z-index: 1;
 	}
-	.home {
+	.home,
+	.about,
+	.experience,
+	.projects {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 2rem;
-		padding-left: var(--home-sides);
-		padding-right: var(--home-sides);
+		gap: 4rem;
 		border-bottom-width: 0.1rem;
 		border-bottom-style: solid;
 		border-color: var(--tx-3);
 	}
+	.experience-list,
+	.project-list {
+		display: flex;
+		justify-content: center;
+	}
+	h1 {
+		line-height: 1;
+		font-weight: 300;
+	}
+	.home {
+		gap: 2rem;
+		padding-left: var(--home-sides);
+		padding-right: var(--home-sides);
+	}
 	.home h1 {
 		white-space: nowrap;
 		font-size: 2.5rem;
-		line-height: 1;
 		font-weight: 400;
 		width: fit-content;
 	}
@@ -165,51 +182,25 @@
 		width: 100%;
 	}
 	.experience {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 4rem;
 		padding-left: var(--exp-sides);
 		padding-right: var(--exp-sides);
-		border-bottom-width: 0.1rem;
-		border-bottom-style: solid;
-		border-color: var(--tx-3);
 	}
 	.experience h1 {
 		font-size: 4.5rem;
-		line-height: 1;
-		font-weight: 300;
 	}
 	.experience-list {
-		display: flex;
-		justify-content: center;
 		gap: 2rem;
 		width: 100%;
 	}
 	.projects {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 4rem;
 		padding-left: var(--proj-sides);
 		padding-right: var(--proj-sides);
-		border-bottom-width: 0.1rem;
-		border-bottom-style: solid;
-		border-color: var(--tx-3);
 	}
 	.projects h1 {
 		margin-top: 6rem;
 		font-size: 3rem;
-		line-height: 1;
-		font-weight: 300;
 	}
 	.project-list {
-		display: flex;
-		justify-content: center;
 		gap: 1.5rem;
 		flex-wrap: wrap;
 	}
