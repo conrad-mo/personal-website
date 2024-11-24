@@ -97,8 +97,8 @@
 		padding-top: 0.75rem;
 		padding-bottom: 0.75rem;
 		border-radius: 0.375rem;
+		-webkit-backdrop-filter: blur(15px);
 		backdrop-filter: blur(15px);
-		-webkit-backdrop-filter: blur(10px);
 	}
 	.menu-button {
 		touch-action: manipulation;
