@@ -53,7 +53,7 @@
 	}
 	.sections {
 		display: flex;
-		gap: 0rem;
+		gap: 0.5rem;
 		margin-right: 1rem;
 	}
 	button {
@@ -64,9 +64,10 @@
 		padding-left: 0.75rem;
 		padding-right: 0.75rem;
 		border-radius: 0.375rem;
+		transition: background-color 0.3s ease;
 	}
 	button:hover {
-		background-color: var(--hover-background);
+		background-color: var(--tx-3);
 	}
 	.socials button {
 		padding-left: 0.5rem;
