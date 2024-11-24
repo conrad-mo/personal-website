@@ -26,7 +26,7 @@
 		</button>
 	</div>
 	{#if isDrawerOpen}
-		<div transition:slide={{ y: -200, duration: 100 }} class="drawer">
+		<div class="drawer">
 			<button use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
 			<button use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button>
 			<button use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
