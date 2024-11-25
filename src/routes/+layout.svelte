@@ -5,15 +5,15 @@
 {@render children()}
 
 <style>
-	/* @font-face {
+	@font-face {
 		font-family: Inter;
 		font-style: normal;
 		font-weight: 100 900;
 		font-display: swap;
 		src: url('$lib/assets/fonts/InterVariable.woff2') format('woff2');
-	} */
+	}
 	:global(html, body) {
-		font-family: sans-serif;
+		font-family: 'Inter', sans-serif;
 		color: var(--foreground);
 		background: var(--background);
 		height: 100%;
