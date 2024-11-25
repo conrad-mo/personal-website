@@ -5,7 +5,7 @@
 {@render children()}
 
 <style>
-	/* @font-face {
+	@font-face {
 		font-family: 'Inter';
 		font-style: normal;
 		font-weight: 300;
@@ -18,9 +18,9 @@
 		font-weight: 400;
 		font-display: swap;
 		src: url('$lib/assets/fonts/inter-latin-400-normal.woff2') format('woff2');
-	} */
+	}
 	:global(html, body) {
-		font-family: sans-serif;
+		font-family: 'Inter', sans-serif;
 		color: var(--foreground);
 		background: var(--background);
 		height: 100%;
