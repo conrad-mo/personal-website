@@ -79,23 +79,43 @@
 	{/if}
 	<div class="desktop">
 		<div class="socials">
-			<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
-				<button>
+			<a
+				href="/Conrad_Mo_resume.pdf"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Resume Link"
+			>
+				<button aria-label="Resume Button">
 					<Resume />
 				</button>
 			</a>
-			<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
-				<button>
+			<a
+				href="https://www.instagram.com/conrad.mo/"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Instagram Link"
+			>
+				<button aria-label="Instagram Button">
 					<Instagram />
 				</button>
 			</a>
-			<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
-				<button>
+			<a
+				href="https://www.linkedin.com/in/conradmo/"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Linkedin Link"
+			>
+				<button aria-label="Linkedin Button">
 					<Linkedin />
 				</button>
 			</a>
-			<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
-				<button>
+			<a
+				href="https://github.com/conrad-mo"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Github Link"
+			>
+				<button aria-label="Github Button">
 					<Github />
 				</button>
 			</a>
