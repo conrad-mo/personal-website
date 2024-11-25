@@ -6,6 +6,7 @@
 	import { fly } from 'svelte/transition';
 	import { inview } from 'svelte-inview';
 	let homeVisible = $state(false);
+	let aboutVisible = $state(false);
 	let expsVisible = $state(false);
 	let projectsVisible = $state(false);
 </script>
@@ -33,23 +34,36 @@
 		</p>
 	{/if}
 </div>
-<div use:scrollRef={'about'} class="about">
-	<div class="about-content">
-		<h1>About me</h1>
-		<div class="about-text">
-			<p>
-				Coding and playing the piano are my two main passions. Music, in particular, holds a special
-				place in my heart, allowing me to express myself in unique ways.
-			</p>
-			<p>
-				When I&apos;m not immersed in the world of music and coding, I enjoy dining out with friends
-				and exploring Toronto&apos;s diverse culinary offerings. Food is a wonderful way to connect,
-				but my true love is the piano. If you&apos;re as passionate about music and enjoy good
-				company, let&apos;s connect and share our stories!
-			</p>
+<div
+	use:scrollRef={'about'}
+	class="about"
+	use:inview={{ threshold: 0.5 }}
+	oninview_enter={() => {
+		aboutVisible = true;
+	}}
+>
+	{#if aboutVisible}
+		<div class="about-content">
+			<h1 transition:fly={{ y: 200, duration: 500 }}>About me</h1>
+			<div class="about-text">
+				<p transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
+					Coding and playing the piano are my two main passions. Music, in particular, holds a
+					special place in my heart, allowing me to express myself in unique ways.
+				</p>
+				<p transition:fly={{ delay: 300, y: 200, opacity: 0, duration: 500 }}>
+					When I&apos;m not immersed in the world of music and coding, I enjoy dining out with
+					friends and exploring Toronto&apos;s diverse culinary offerings. Food is a wonderful way
+					to connect, but my true love is the piano. If you&apos;re as passionate about music and
+					enjoy good company, let&apos;s connect and share our stories!
+				</p>
+			</div>
 		</div>
-	</div>
-	<enhanced:img src="$lib/assets/pfp.jpg" alt="profile picture" />
+		<enhanced:img
+			src="$lib/assets/pfp.jpg"
+			alt="profile picture"
+			transition:fly={{ y: 200, duration: 500 }}
+		/>
+	{/if}
 </div>
 <div
 	use:scrollRef={'experience'}
