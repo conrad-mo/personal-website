@@ -139,6 +139,22 @@
 				photo="wisdomwhisperer"
 				link="https://github.com/rtutz/NewHacks2023-WisdomWhisperer"
 			/>
+			<Project
+				name="Histovibes"
+				description="A web app that allows students to historic content and 
+                    create timelines, explore auto-generated quizzes from 
+                    uploaded historic content. Submission for UoftHacks 11"
+				photo="histovibes"
+				link="https://github.com/anniyy/HistoVibes"
+			/>
+			<Project
+				name="Lifelens"
+				description="A mobile app built with flutter that allows users to input 
+                    personal information and share it with friends and join multiple friend groups.
+                    Winner of Best Use of Kintone at QHacks 2024"
+				photo="lifelens"
+				link="https://github.com/CherylZ4/LifeLens"
+			/>
 		</div>
 	{/if}
 </div>
@@ -243,6 +259,7 @@
 	.projects {
 		padding-left: var(--proj-sides);
 		padding-right: var(--proj-sides);
+		padding-bottom: 10rem;
 	}
 	.projects h1 {
 		margin-top: 6rem;
