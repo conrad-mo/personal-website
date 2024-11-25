@@ -227,7 +227,6 @@
 		gap: 2rem;
 	}
 	.about-text {
-		align-items: center;
 		gap: 1rem;
 	}
 	.about h1 {
