@@ -37,9 +37,9 @@
 						href="/Conrad_Mo_resume.pdf"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label="Resume"
+						aria-label="Resume Link"
 					>
-						<button onclick={toggleDrawer} aria-label="Resume">
+						<button onclick={toggleDrawer} aria-label="Resume Button">
 							<Resume />
 						</button>
 					</a>
@@ -47,9 +47,9 @@
 						href="https://www.instagram.com/conrad.mo/"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label="Instagram"
+						aria-label="Instagram Link"
 					>
-						<button onclick={toggleDrawer} aria-label="Instagram">
+						<button onclick={toggleDrawer} aria-label="Instagram Button">
 							<Instagram />
 						</button>
 					</a>
@@ -57,9 +57,9 @@
 						href="https://www.linkedin.com/in/conradmo/"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label="Linkedin"
+						aria-label="Linkedin Link"
 					>
-						<button onclick={toggleDrawer} aria-label="Linkedin">
+						<button onclick={toggleDrawer} aria-label="Linkedin Button">
 							<Linkedin />
 						</button>
 					</a>
@@ -67,9 +67,9 @@
 						href="https://github.com/conrad-mo"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label="Github"
+						aria-label="Github Link"
 					>
-						<button onclick={toggleDrawer} aria-label="Github">
+						<button onclick={toggleDrawer} aria-label="Github Button">
 							<Github />
 						</button>
 					</a>
