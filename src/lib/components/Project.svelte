@@ -1,18 +1,24 @@
-<script>
-	// @ts-nocheck
-
+<script lang="ts">
 	const { name, description, photo, link } = $props();
 
-	const imageModules = import.meta.glob(
+	type ImageModules = Record<
+		string,
+		{
+			default: string;
+			[key: string]: unknown;
+		}
+	>;
+
+	const imageModules: ImageModules = import.meta.glob(
 		`$lib/assets/projects/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}`,
 		{
 			eager: true,
 			query: { enhanced: true }
 		}
 	);
-	const selectedImage = Object.entries(imageModules).find(([path]) =>
-		path.split('/').pop().startsWith(photo)
-	)?.[1].default;
+	const selectedImage: string =
+		Object.entries(imageModules).find(([path]) => path.split('/').pop()?.startsWith(photo))?.[1]
+			.default ?? '';
 </script>
 
 <a href={link} target="_blank" rel="noopener noreferrer">

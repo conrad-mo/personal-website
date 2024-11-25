@@ -1,6 +1,4 @@
-<script>
-	// @ts-nocheck
-
+<script lang="ts">
 	import Instagram from '~icons/mdi/instagram';
 	import Linkedin from '~icons/mdi/linkedin';
 	import Github from '~icons/mdi/github';
@@ -8,7 +6,6 @@
 	import Menu from '~icons/mdi/menu';
 	import Close from '~icons/mdi/close';
 	import { scrollTo } from 'svelte-scrolling';
-	import { slide } from 'svelte/transition';
 	let isDrawerOpen = $state(false);
 	function toggleDrawer() {
 		isDrawerOpen = !isDrawerOpen;
@@ -26,7 +23,7 @@
 		</button>
 	</div>
 	{#if isDrawerOpen}
-		<div transition:slide={{ y: -200, duration: 100 }}>
+		<div>
 			<div class="drawer">
 				<button use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
 				<button use:scrollTo={'about'} onclick={toggleDrawer}>About</button>

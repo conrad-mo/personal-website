@@ -58,11 +58,7 @@
 				</p>
 			</div>
 		</div>
-		<enhanced:img
-			src="$lib/assets/pfp.jpg"
-			alt="profile picture"
-			transition:fly={{ y: 200, duration: 500 }}
-		/>
+		<enhanced:img src="$lib/assets/pfp.jpg" alt="pfp" transition:fly={{ y: 200, duration: 500 }} />
 	{/if}
 </div>
 <div
@@ -76,20 +72,8 @@
 	{#if expsVisible}
 		<h1 transition:fly={{ y: 200, duration: 500 }}>Experiences</h1>
 		<div transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }} class="experience-list">
-			<Experience
-				position="Software Engineer"
-				name="Northern Labs"
-				description="Canadian blockchain startup. Worked on a proprietary newspaper paywall that processes transactions on the blockchain"
-				active={activeExp}
-				photo="/experiences/northernlabs.svg"
-			/>
-			<Experience
-				position="Web Developer"
-				name="Hack the Valley"
-				description="Canada's second largest hackathon"
-				active={activeExp}
-				photo="/experiences/htv.svg"
-			/>
+			<Experience name="Northern Labs" photo="/experiences/northernlabs.svg" />
+			<Experience name="Hack the Valley" photo="/experiences/htv.svg" />
 		</div>
 	{/if}
 </div>

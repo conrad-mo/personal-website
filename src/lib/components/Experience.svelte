@@ -1,5 +1,5 @@
-<script>
-	const { position, name, description, photo, active } = $props();
+<script lang="ts">
+	const { name, photo } = $props();
 </script>
 
 <main>
