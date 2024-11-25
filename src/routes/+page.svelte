@@ -200,7 +200,7 @@
 	}
 	.home h1 {
 		white-space: nowrap;
-		font-size: 2.5rem;
+		font-size: 2.25rem;
 		font-weight: 400;
 		width: fit-content;
 	}
@@ -231,7 +231,7 @@
 		gap: 1rem;
 	}
 	.about h1 {
-		font-size: 2.5rem;
+		font-size: 2.25rem;
 		font-weight: 300;
 	}
 	.about p {
@@ -251,7 +251,7 @@
 		padding-right: var(--exp-sides);
 	}
 	.experience h1 {
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
 	.experience-list {
 		gap: 2rem;
@@ -263,7 +263,7 @@
 	}
 	.projects h1 {
 		margin-top: 6rem;
-		font-size: 3rem;
+		font-size: 2.75rem;
 	}
 	.project-list {
 		gap: 1.5rem;
@@ -286,7 +286,10 @@
 			flex-direction: column;
 		}
 		.experience h1 {
-			font-size: 2.5rem;
+			font-size: 2.25rem;
+		}
+		.projects h1 {
+			margin-left: 2rem;
 		}
 	}
 	@media (min-width: 640px) {
@@ -325,7 +328,7 @@
 			align-items: start;
 		}
 		.about h1 {
-			font-size: 3rem;
+			font-size: 2.75rem;
 		}
 		.about img {
 			transform: translateY(0rem);

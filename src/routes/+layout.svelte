@@ -6,11 +6,18 @@
 
 <style>
 	@font-face {
-		font-family: Inter;
+		font-family: 'Inter';
 		font-style: normal;
-		font-weight: 100 900;
+		font-weight: 300;
 		font-display: swap;
-		src: url('$lib/assets/fonts/InterVariable.woff2') format('woff2');
+		src: url('$lib/assets/fonts/inter-latin-300-normal.woff2') format('woff2');
+	}
+	@font-face {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('$lib/assets/fonts/inter-latin-400-normal.woff2') format('woff2');
 	}
 	:global(html, body) {
 		font-family: 'Inter', sans-serif;
