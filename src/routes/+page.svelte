@@ -33,19 +33,24 @@
 		</p>
 	{/if}
 </div>
-<!-- <div use:scrollRef={'about'} class="about">
-	<h1>About me</h1>
-	<p>
-		Coding and playing the piano are my two main passions. Music, in particular, holds a special
-		place in my heart, allowing me to express myself in unique ways.
-	</p>
-	<p>
-		When I&apos;m not immersed in the world of music and coding, I enjoy dining out with friends and
-		exploring Toronto&apos;s diverse culinary offerings. Food is a wonderful way to connect, but my
-		true love is the piano. If you&apos;re as passionate about music and enjoy good company,
-		let&apos;s connect and share our stories!
-	</p>
-</div> -->
+<div use:scrollRef={'about'} class="about">
+	<div class="about-content">
+		<h1>About me</h1>
+		<div class="about-text">
+			<p>
+				Coding and playing the piano are my two main passions. Music, in particular, holds a special
+				place in my heart, allowing me to express myself in unique ways.
+			</p>
+			<p>
+				When I&apos;m not immersed in the world of music and coding, I enjoy dining out with friends
+				and exploring Toronto&apos;s diverse culinary offerings. Food is a wonderful way to connect,
+				but my true love is the piano. If you&apos;re as passionate about music and enjoy good
+				company, let&apos;s connect and share our stories!
+			</p>
+		</div>
+	</div>
+	<enhanced:img src="$lib/assets/pfp.jpg" alt="profile picture" />
+</div>
 <div
 	use:scrollRef={'experience'}
 	class="experience"
@@ -191,7 +196,43 @@
 		font-weight: 300;
 		width: 100%;
 	}
+	.about {
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-left: var(--about-sides);
+		padding-right: var(--about-sides);
+		gap: 1rem;
+	}
+	.about-content,
+	.about-text {
+		display: flex;
+		flex-direction: column;
+	}
+	.about-content {
+		align-items: center;
+		gap: 2rem;
+	}
+	.about-text {
+		align-items: center;
+		gap: 1rem;
+	}
+	.about h1 {
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+	.about p {
+		font-size: 1rem;
+		font-weight: 300;
+		color: var(--tx-2);
+	}
+	.about img {
+		width: var(--pfp-width);
+		height: var(--pfp-height);
+		clip-path: circle();
+		transform: translateY(2rem);
+	}
 	.experience {
+		align-items: center;
 		padding-left: var(--exp-sides);
 		padding-right: var(--exp-sides);
 	}
@@ -223,6 +264,9 @@
 		:root {
 			--exp-sides: 4rem;
 			--home-sides: 1.5rem;
+			--pfp-width: 180px;
+			--pfp-height: 240px;
+			--about-sides: 2rem;
 		}
 		.experience-list {
 			flex-direction: column;
@@ -236,6 +280,9 @@
 			--exp-sides: 2rem;
 			--proj-sides: 8rem;
 			--home-sides: 8rem;
+			--pfp-width: 180px;
+			--pfp-height: 240px;
+			--about-sides: 2rem;
 		}
 		.home {
 			gap: 3rem;
@@ -250,9 +297,24 @@
 	@media (min-width: 768px) {
 		:root {
 			--exp-sides: 7rem;
+			--pfp-width: 240px;
+			--pfp-height: 320px;
 		}
 		.home h1 {
 			font-size: 4rem;
+		}
+		.about {
+			flex-direction: row;
+			gap: 3rem;
+		}
+		.about-content {
+			align-items: start;
+		}
+		.about h1 {
+			font-size: 3rem;
+		}
+		.about img {
+			transform: translateY(0rem);
 		}
 	}
 	@media (min-width: 900px) {
@@ -263,6 +325,9 @@
 	@media (min-width: 1024px) {
 		:root {
 			--exp-sides: 15rem;
+			--about-sides: 4rem;
+			--pfp-width: 300px;
+			--pfp-height: 400px;
 		}
 		.projects {
 			align-items: start;
@@ -273,15 +338,30 @@
 		.home p {
 			width: 70%;
 		}
+		.about {
+			gap: 10rem;
+		}
 	}
 	@media (min-width: 1280px) {
 		:root {
 			--exp-sides: 20rem;
+			--about-sides: 8rem;
+			--pfp-width: 330px;
+			--pfp-height: 440px;
+		}
+		.about-text {
+			gap: 1.5rem;
 		}
 	}
 	@media (min-width: 1536px) {
 		:root {
 			--exp-sides: 24rem;
+			--about-sides: 16rem;
+			--pfp-width: 390px;
+			--pfp-height: 520px;
+		}
+		.about-content {
+			gap: 4rem;
 		}
 	}
 	@media (min-width: 1804px) {
