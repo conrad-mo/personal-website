@@ -17,7 +17,7 @@
 
 <main>
 	<div class="menu-button">
-		<button onclick={toggleDrawer}>
+		<button onclick={toggleDrawer} aria-label="Menu Button">
 			{#if isDrawerOpen}
 				<Close />
 			{:else}
@@ -33,23 +33,43 @@
 				<button use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button>
 				<button use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
 				<div class="socials">
-					<a href="/Conrad_Mo_resume.pdf" target="_blank" rel="noopener noreferrer">
-						<button onclick={toggleDrawer}>
+					<a
+						href="/Conrad_Mo_resume.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Resume"
+					>
+						<button onclick={toggleDrawer} aria-label="Resume">
 							<Resume />
 						</button>
 					</a>
-					<a href="https://www.instagram.com/conrad.mo/" target="_blank" rel="noopener noreferrer">
-						<button onclick={toggleDrawer}>
+					<a
+						href="https://www.instagram.com/conrad.mo/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Instagram"
+					>
+						<button onclick={toggleDrawer} aria-label="Instagram">
 							<Instagram />
 						</button>
 					</a>
-					<a href="https://www.linkedin.com/in/conradmo/" target="_blank" rel="noopener noreferrer">
-						<button onclick={toggleDrawer}>
+					<a
+						href="https://www.linkedin.com/in/conradmo/"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Linkedin"
+					>
+						<button onclick={toggleDrawer} aria-label="Linkedin">
 							<Linkedin />
 						</button>
 					</a>
-					<a href="https://github.com/conrad-mo" target="_blank" rel="noopener noreferrer">
-						<button onclick={toggleDrawer}>
+					<a
+						href="https://github.com/conrad-mo"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Github"
+					>
+						<button onclick={toggleDrawer} aria-label="Github">
 							<Github />
 						</button>
 					</a>
