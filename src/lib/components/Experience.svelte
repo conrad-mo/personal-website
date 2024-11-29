@@ -1,9 +1,11 @@
 <script lang="ts">
-	const { name, photo } = $props();
+	const { name, image, viewbox } = $props();
 </script>
 
 <main>
-	<img loading="lazy" src={photo} alt={name} />
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox={viewbox} fill="currentColor" aria-label={name}>
+		{@html image}
+	</svg>
 </main>
 
 <style>
@@ -18,18 +20,25 @@
 		justify-content: center;
 		width: 100%;
 	}
-	img {
+	svg {
 		max-height: 200px;
 		max-width: 200px;
 		height: auto;
 		width: 40%;
 	}
+	svg {
+		fill: rgb(16, 15, 15);
+	}
+
 	:root {
 		--exp-background: rgb(242, 240, 229);
 	}
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--exp-background: rgb(28, 27, 26);
+		}
+		svg {
+			fill: rgb(206, 205, 195);
 		}
 	}
 </style>
