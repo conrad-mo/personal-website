@@ -18,7 +18,7 @@
 		background-color: var(--exp-background);
 		display: flex;
 		justify-content: center;
-		width: 100%;
+		width: 21rem;
 	}
 	svg {
 		max-height: 200px;

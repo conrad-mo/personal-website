@@ -214,6 +214,7 @@
 	}
 	.experience-list,
 	.project-list {
+		flex-wrap: wrap;
 		display: flex;
 		justify-content: center;
 	}
@@ -295,7 +296,6 @@
 	}
 	.project-list {
 		gap: 1.5rem;
-		flex-wrap: wrap;
 	}
 	@media (max-width: 639px) {
 		:root {
@@ -305,9 +305,7 @@
 			--pfp-height: 240px;
 			--about-sides: 2rem;
 		}
-		.experience-list {
-			flex-direction: column;
-		}
+
 		.experience h1 {
 			font-size: 2.25rem;
 		}
@@ -328,9 +326,6 @@
 			--pfp-width: 180px;
 			--pfp-height: 240px;
 			--about-sides: 2rem;
-		}
-		.experience-list {
-			flex-direction: column;
 		}
 		.home {
 			gap: 3rem;
@@ -364,9 +359,6 @@
 		.about img {
 			transform: translateY(0rem);
 		}
-		.experience-list {
-			flex-direction: row;
-		}
 	}
 	@media (min-width: 900px) {
 		:root {
@@ -375,7 +367,7 @@
 	}
 	@media (min-width: 1024px) {
 		:root {
-			--exp-sides: 5rem;
+			--exp-sides: 3rem;
 			--about-sides: 4rem;
 			--pfp-width: 300px;
 			--pfp-height: 400px;
@@ -395,7 +387,7 @@
 	}
 	@media (min-width: 1280px) {
 		:root {
-			--exp-sides: 10rem;
+			--exp-sides: 5rem;
 			--about-sides: 8rem;
 			--pfp-width: 330px;
 			--pfp-height: 440px;
@@ -406,7 +398,6 @@
 	}
 	@media (min-width: 1536px) {
 		:root {
-			--exp-sides: 20rem;
 			--about-sides: 16rem;
 			--pfp-width: 390px;
 			--pfp-height: 520px;
@@ -416,19 +407,11 @@
 		}
 	}
 	@media (min-width: 1804px) {
-		:root {
-			--exp-sides: 28rem;
-		}
 		.project-list {
 			justify-content: start;
 		}
 		.home p {
 			width: 50%;
-		}
-	}
-	@media (min-width: 2000px) {
-		:root {
-			--exp-sides: 30rem;
 		}
 	}
 </style>
