@@ -302,7 +302,7 @@
 			--exp-sides: 6rem;
 			--home-sides: 1.5rem;
 			--pfp-width: 180px;
-			--pfp-height: 240px;
+			--pfp-height: 270px;
 			--about-sides: 2rem;
 		}
 
@@ -324,7 +324,7 @@
 			--proj-sides: 8rem;
 			--home-sides: 8rem;
 			--pfp-width: 180px;
-			--pfp-height: 240px;
+			--pfp-height: 270px;
 			--about-sides: 2rem;
 		}
 		.home {
@@ -341,7 +341,7 @@
 		:root {
 			--exp-sides: 2rem;
 			--pfp-width: 240px;
-			--pfp-height: 320px;
+			--pfp-height: 360px;
 		}
 		.home h1 {
 			font-size: 4rem;
@@ -370,7 +370,7 @@
 			--exp-sides: 3rem;
 			--about-sides: 4rem;
 			--pfp-width: 300px;
-			--pfp-height: 400px;
+			--pfp-height: 450px;
 		}
 		.projects {
 			align-items: start;
@@ -390,7 +390,7 @@
 			--exp-sides: 5rem;
 			--about-sides: 8rem;
 			--pfp-width: 330px;
-			--pfp-height: 440px;
+			--pfp-height: 495px;
 		}
 		.about-text {
 			gap: 1.5rem;
@@ -400,7 +400,7 @@
 		:root {
 			--about-sides: 16rem;
 			--pfp-width: 390px;
-			--pfp-height: 520px;
+			--pfp-height: 585px;
 		}
 		.about-content {
 			gap: 4rem;
