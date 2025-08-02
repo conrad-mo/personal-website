@@ -6,9 +6,9 @@ import Icons from 'unplugin-icons/vite';
 export default defineConfig({
 	plugins: [
 		enhancedImages(),
-		sveltekit(),
 		Icons({
 			compiler: 'svelte'
-		})
+		}),
+		sveltekit()
 	]
 });
