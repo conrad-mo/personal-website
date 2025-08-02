@@ -11,41 +11,43 @@
 	let projectsVisible = $state(false);
 </script>
 
-<div class="nav">
+<div class="navbar-container">
 	<Navbar />
 </div>
-<div
+
+<section
 	use:scrollRef={'home'}
-	class="home"
+	class="section section--home"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		homeVisible = true;
 	}}
 >
 	{#if homeVisible}
-		<Typewriter mode="loop"
-			><h1 transition:fly={{ y: 200, duration: 500 }}>Software Engineer</h1>
-			<h1 transition:fly={{ y: 200, duration: 500 }}>Fullstack Developer</h1>
-			<h1 transition:fly={{ y: 200, duration: 500 }}>DevOps Engineer</h1>
-			<h1 transition:fly={{ y: 200, duration: 500 }}>Pianist 🎹</h1>
+		<Typewriter mode="loop">
+			<h1 class="home_title" transition:fly={{ y: 200, duration: 500 }}>Software Engineer</h1>
+			<h1 class="home_title" transition:fly={{ y: 200, duration: 500 }}>Fullstack Developer</h1>
+			<h1 class="home_title" transition:fly={{ y: 200, duration: 500 }}>DevOps Engineer</h1>
+			<h1 class="home_title" transition:fly={{ y: 200, duration: 500 }}>Pianist 🎹</h1>
 		</Typewriter>
-		<p transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
+		<p class="home_intro" transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
 			👋 Hi! I&apos;m Conrad Mo, a Computer Science undergrad at the University of Toronto.
 		</p>
 	{/if}
-</div>
-<div
+</section>
+
+<section
 	use:scrollRef={'about'}
-	class="about"
+	class="section section--about"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		aboutVisible = true;
 	}}
 >
 	{#if aboutVisible}
-		<div class="about-content">
-			<h1 transition:fly={{ y: 200, duration: 500 }}>About me</h1>
-			<div class="about-text">
+		<div class="about_content">
+			<h2 class="section_title" transition:fly={{ y: 200, duration: 500 }}>About me</h2>
+			<div class="about_text">
 				<p transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
 					Coding and playing the piano are my two main passions. Music, in particular, holds a
 					special place in my heart, allowing me to express myself in unique ways.
@@ -58,20 +60,28 @@
 				</p>
 			</div>
 		</div>
-		<enhanced:img src="$lib/assets/pfp.jpg" alt="pfp" transition:fly={{ y: 200, duration: 500 }} />
+		<enhanced:img
+			class="about_image"
+			src="$lib/assets/pfp.jpg"
+			alt="pfp"
+			transition:fly={{ y: 200, duration: 500 }}
+		/>
 	{/if}
-</div>
-<div
+</section>
+
+<section
 	use:scrollRef={'experience'}
-	class="experience"
+	class="section section--experience"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		expsVisible = true;
 	}}
 >
 	{#if expsVisible}
-		<h1 transition:fly={{ y: 200, duration: 500 }}>Experiences</h1>
-		<div transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }} class="experience-list">
+		<h2 class="section_title section_title--large" transition:fly={{ y: 200, duration: 500 }}>
+			Experiences
+		</h2>
+		<div class="experience_list" transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
 			<Experience
 				name="Shopify"
 				image={`<path d="M74.7,14.8c0,0-1.4,0.4-3.7,1.1c-0.4-1.3-1-2.8-1.8-4.4c-2.6-5-6.5-7.7-11.1-7.7c0,0,0,0,0,0c-0.3,0-0.6,0-1,0.1
@@ -104,18 +114,19 @@
 			/>
 		</div>
 	{/if}
-</div>
-<div
+</section>
+
+<section
 	use:scrollRef={'projects'}
-	class="projects"
+	class="section section--projects"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		projectsVisible = true;
 	}}
 >
 	{#if projectsVisible}
-		<h1 transition:fly={{ y: 200, duration: 500 }}>Projects</h1>
-		<div transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }} class="project-list">
+		<h2 class="section_title" transition:fly={{ y: 200, duration: 500 }}>Projects</h2>
+		<div class="projects_list" transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
 			<Project
 				name="UTSC Geoguessr"
 				description="A game built with python and tkinter that aims to help new students learn the campus. Submission for HTV 7"
@@ -185,232 +196,292 @@
 			/>
 		</div>
 	{/if}
-</div>
+</section>
 
 <style>
+	/* Layout */
 	:root {
 		display: flex;
 		flex-direction: column;
+
+		/* Spacing Variables */
+		--section-padding-sm: 1.5rem;
+		--section-padding-md: 2rem;
+		--section-padding-lg: 4rem;
+		--section-padding-xl: 8rem;
+
+		/* Typography Scale */
+		--text-sm: 0.875rem;
+		--text-base: 1rem;
+		--text-lg: 1.5rem;
+		--text-xl: 2.25rem;
+		--text-2xl: 2.75rem;
+		--text-3xl: 3rem;
+		--text-4xl: 4rem;
+		--text-5xl: 6rem;
+
+		/* Spacing Scale */
+		--space-xs: 0.25rem;
+		--space-sm: 0.5rem;
+		--space-md: 1rem;
+		--space-lg: 1.5rem;
+		--space-xl: 2rem;
+		--space-2xl: 3rem;
+		--space-3xl: 4rem;
+
+		/* Border */
+		--border-color: var(--tx-3);
 	}
-	.nav {
-		max-height: 0;
-		top: 0;
+
+	/* Navbar Container */
+	.navbar-container {
 		position: fixed;
+		top: 0;
 		width: 100%;
 		z-index: 1;
+		max-height: 0;
 	}
-	.home,
-	.about,
-	.experience,
-	.projects {
+
+	/* Base Section Styles */
+	.section {
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 4rem;
-		border-bottom-width: 0.1rem;
-		border-bottom-style: solid;
-		border-color: var(--tx-3);
+		gap: var(--space-3xl);
+		border-bottom: 0.1rem solid var(--border-color);
+		padding: 0 var(--section-padding-sm);
 	}
-	.experience-list,
-	.project-list {
-		flex-wrap: wrap;
-		display: flex;
-		justify-content: center;
-	}
-	h1 {
+
+	/* Section Title */
+	.section_title {
+		font-size: var(--text-2xl);
+		font-weight: 300;
 		line-height: 1;
-		font-weight: 300;
+		margin: 0;
+		color: var(--foreground);
 	}
-	.home {
-		gap: 2rem;
-		padding-left: var(--home-sides);
-		padding-right: var(--home-sides);
+
+	.section_title--large {
+		font-size: var(--text-4xl);
 	}
-	.home h1 {
-		white-space: nowrap;
-		font-size: 2.25rem;
+
+	/* Home Section */
+	.section--home {
+		gap: var(--space-xl);
+	}
+
+	.home_title {
+		font-size: var(--text-xl);
 		font-weight: 400;
+		line-height: 1;
+		white-space: nowrap;
 		width: fit-content;
+		margin: 0;
+		color: var(--foreground);
 	}
-	.home p {
-		font-size: 1rem;
-		line-height: 2rem;
+
+	.home_intro {
+		font-size: var(--text-base);
 		font-weight: 300;
+		line-height: 2rem;
 		width: 100%;
+		margin: 0;
 	}
-	.about {
+
+	/* About Section */
+	.section--about {
 		flex-direction: column-reverse;
 		align-items: center;
-		padding-left: var(--about-sides);
-		padding-right: var(--about-sides);
-		gap: 1rem;
+		gap: var(--space-md);
 	}
-	.about-content,
-	.about-text {
+
+	.about_content {
 		display: flex;
 		flex-direction: column;
-	}
-	.about-content {
 		align-items: center;
-		gap: 2rem;
+		gap: var(--space-xl);
 	}
-	.about-text {
-		gap: 1rem;
+
+	.about_text {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-md);
 	}
-	.about h1 {
-		font-size: 2.25rem;
-		font-weight: 300;
-	}
-	.about p {
-		font-size: 1rem;
+
+	.about_text p {
+		font-size: var(--text-base);
 		font-weight: 300;
 		color: var(--tx-2);
+		margin: 0;
 	}
-	.about img {
-		width: var(--pfp-width);
-		height: var(--pfp-height);
+
+	.about_image {
+		--image-size: 180px;
+		width: var(--image-size);
+		height: calc(var(--image-size) * 1.5);
 		clip-path: circle();
 		transform: translateY(2rem);
 	}
-	.experience {
+
+	/* Experience Section */
+	.section--experience {
 		align-items: center;
-		padding-left: var(--exp-sides);
-		padding-right: var(--exp-sides);
+		padding: 0 var(--section-padding-lg);
 	}
-	.experience h1 {
-		font-size: 4rem;
-	}
-	.experience-list {
-		gap: 2rem;
+
+	.experience_list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-xl);
 		width: 100%;
 	}
-	.projects {
-		padding-left: var(--proj-sides);
-		padding-right: var(--proj-sides);
+
+	/* Projects Section */
+	.section--projects {
 		padding-bottom: 10rem;
 	}
-	.projects h1 {
+
+	.section--projects .section_title {
 		margin-top: 6rem;
-		font-size: 2.75rem;
 	}
-	.project-list {
-		gap: 1.5rem;
+
+	.projects_list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-lg);
 	}
+
+	/* Responsive Design */
 	@media (max-width: 639px) {
-		:root {
-			--exp-sides: 6rem;
-			--home-sides: 1.5rem;
-			--pfp-width: 180px;
-			--pfp-height: 270px;
-			--about-sides: 2rem;
+		.section--experience {
+			padding: 0 var(--space-2xl);
 		}
 
-		.experience h1 {
-			font-size: 2.25rem;
-		}
-		.projects h1 {
-			margin-left: 2rem;
+		.section--experience .section_title--large {
+			font-size: var(--text-xl);
 		}
 	}
+
 	@media (max-width: 499px) {
-		:root {
-			--exp-sides: 3rem;
+		.section--experience {
+			padding: 0 var(--space-2xl);
 		}
 	}
+
 	@media (min-width: 640px) {
-		:root {
-			--exp-sides: 10rem;
-			--proj-sides: 8rem;
-			--home-sides: 8rem;
-			--pfp-width: 180px;
-			--pfp-height: 270px;
-			--about-sides: 2rem;
+		.section {
+			padding: 0 var(--section-padding-xl);
 		}
-		.home {
-			gap: 3rem;
+
+		.section--home {
+			gap: var(--space-2xl);
 		}
-		.home h1 {
-			font-size: 3rem;
+
+		.home_title {
+			font-size: var(--text-3xl);
 		}
-		.home p {
-			font-size: 1.5rem;
+
+		.home_intro {
+			font-size: var(--text-lg);
+		}
+
+		.section--experience {
+			padding: 0 var(--section-padding-md);
 		}
 	}
+
 	@media (min-width: 768px) {
-		:root {
-			--exp-sides: 2rem;
-			--pfp-width: 240px;
-			--pfp-height: 360px;
+		.about_image {
+			--image-size: 240px;
+			transform: translateY(0);
 		}
-		.home h1 {
-			font-size: 4rem;
+
+		.home_title {
+			font-size: var(--text-4xl);
 		}
-		.about {
+
+		.section--about {
 			flex-direction: row;
-			gap: 3rem;
+			gap: var(--space-2xl);
 		}
-		.about-content {
-			align-items: start;
-		}
-		.about h1 {
-			font-size: 2.75rem;
-		}
-		.about img {
-			transform: translateY(0rem);
+
+		.about_content {
+			align-items: flex-start;
 		}
 	}
-	@media (min-width: 900px) {
-		:root {
-			--exp-sides: 2rem;
-		}
-	}
+
 	@media (min-width: 1024px) {
-		:root {
-			--exp-sides: 3rem;
-			--about-sides: 4rem;
-			--pfp-width: 300px;
-			--pfp-height: 450px;
+		.section {
+			padding: 0 var(--section-padding-xl);
 		}
-		.projects {
-			align-items: start;
-		}
-		.home h1 {
-			font-size: 6rem;
-		}
-		.home p {
-			width: 70%;
-		}
-		.about {
+
+		.section--about {
+			padding: 0 var(--section-padding-lg);
 			gap: 10rem;
 		}
+
+		.section--experience {
+			padding: 0 var(--space-2xl);
+		}
+
+		.about_image {
+			--image-size: 300px;
+		}
+
+		.section--projects {
+			align-items: flex-start;
+		}
+
+		.home_title {
+			font-size: var(--text-5xl);
+		}
+
+		.home_intro {
+			width: 70%;
+		}
 	}
+
 	@media (min-width: 1280px) {
-		:root {
-			--exp-sides: 5rem;
-			--about-sides: 8rem;
-			--pfp-width: 330px;
-			--pfp-height: 495px;
+		.section--about {
+			padding: 0 var(--section-padding-xl);
 		}
-		.about-text {
-			gap: 1.5rem;
+
+		.section--experience {
+			padding: 0 5rem;
+		}
+
+		.about_image {
+			--image-size: 330px;
+		}
+
+		.about_text {
+			gap: var(--space-lg);
 		}
 	}
+
 	@media (min-width: 1536px) {
-		:root {
-			--about-sides: 16rem;
-			--pfp-width: 390px;
-			--pfp-height: 585px;
+		.section--about {
+			padding: 0 16rem;
 		}
-		.about-content {
-			gap: 4rem;
+
+		.about_image {
+			--image-size: 390px;
+		}
+
+		.about_content {
+			gap: var(--space-3xl);
 		}
 	}
+
 	@media (min-width: 1804px) {
-		.project-list {
-			justify-content: start;
+		.projects_list {
+			justify-content: flex-start;
 		}
-		.home p {
+
+		.home_intro {
 			width: 50%;
 		}
 	}

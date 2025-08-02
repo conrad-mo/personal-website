@@ -12,9 +12,9 @@
 	}
 </script>
 
-<main>
-	<div class="menu-button">
-		<button onclick={toggleDrawer} aria-label="Menu Button">
+<nav class="navbar">
+	<div class="navbar_mobile-toggle">
+		<button class="icon-button" onclick={toggleDrawer} aria-label="Menu Button">
 			{#if isDrawerOpen}
 				<Close />
 			{:else}
@@ -22,67 +22,68 @@
 			{/if}
 		</button>
 	</div>
+
 	{#if isDrawerOpen}
-		<div>
-			<div class="drawer">
-				<button use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
-				<button use:scrollTo={'about'} onclick={toggleDrawer}>About</button>
-				<button use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button>
-				<button use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
-				<div class="socials">
-					<a
-						href="/Conrad_Mo_resume.pdf"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Resume Link"
-					>
-						<button onclick={toggleDrawer} aria-label="Resume Button">
-							<Resume />
-						</button>
-					</a>
-					<a
-						href="https://www.instagram.com/conrad.mo/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Instagram Link"
-					>
-						<button onclick={toggleDrawer} aria-label="Instagram Button">
-							<Instagram />
-						</button>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/conradmo/"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Linkedin Link"
-					>
-						<button onclick={toggleDrawer} aria-label="Linkedin Button">
-							<Linkedin />
-						</button>
-					</a>
-					<a
-						href="https://github.com/conrad-mo"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Github Link"
-					>
-						<button onclick={toggleDrawer} aria-label="Github Button">
-							<Github />
-						</button>
-					</a>
-				</div>
+		<div class="navbar_drawer">
+			<button class="nav-link" use:scrollTo={'home'} onclick={toggleDrawer}>Home</button>
+			<button class="nav-link" use:scrollTo={'about'} onclick={toggleDrawer}>About</button>
+			<button class="nav-link" use:scrollTo={'experience'} onclick={toggleDrawer}>Experience</button
+			>
+			<button class="nav-link" use:scrollTo={'projects'} onclick={toggleDrawer}>Projects</button>
+			<div class="social-links">
+				<a
+					href="/Conrad_Mo_resume.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Resume Link"
+				>
+					<button class="icon-button" onclick={toggleDrawer} aria-label="Resume Button">
+						<Resume />
+					</button>
+				</a>
+				<a
+					href="https://www.instagram.com/conrad.mo/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Instagram Link"
+				>
+					<button class="icon-button" onclick={toggleDrawer} aria-label="Instagram Button">
+						<Instagram />
+					</button>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/conradmo/"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Linkedin Link"
+				>
+					<button class="icon-button" onclick={toggleDrawer} aria-label="Linkedin Button">
+						<Linkedin />
+					</button>
+				</a>
+				<a
+					href="https://github.com/conrad-mo"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Github Link"
+				>
+					<button class="icon-button" onclick={toggleDrawer} aria-label="Github Button">
+						<Github />
+					</button>
+				</a>
 			</div>
 		</div>
 	{/if}
-	<div class="desktop">
-		<div class="socials">
+
+	<div class="navbar_desktop">
+		<div class="social-links">
 			<a
 				href="/Conrad_Mo_resume.pdf"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="Resume Link"
 			>
-				<button aria-label="Resume Button">
+				<button class="icon-button" aria-label="Resume Button">
 					<Resume />
 				</button>
 			</a>
@@ -92,7 +93,7 @@
 				rel="noopener noreferrer"
 				aria-label="Instagram Link"
 			>
-				<button aria-label="Instagram Button">
+				<button class="icon-button" aria-label="Instagram Button">
 					<Instagram />
 				</button>
 			</a>
@@ -102,7 +103,7 @@
 				rel="noopener noreferrer"
 				aria-label="Linkedin Link"
 			>
-				<button aria-label="Linkedin Button">
+				<button class="icon-button" aria-label="Linkedin Button">
 					<Linkedin />
 				</button>
 			</a>
@@ -112,118 +113,134 @@
 				rel="noopener noreferrer"
 				aria-label="Github Link"
 			>
-				<button aria-label="Github Button">
+				<button class="icon-button" aria-label="Github Button">
 					<Github />
 				</button>
 			</a>
 		</div>
-		<div class="sections">
-			<button use:scrollTo={'home'}>Home</button>
-			<button use:scrollTo={'about'}>About</button>
-			<button use:scrollTo={'experience'}>Experience</button>
-			<button use:scrollTo={'projects'}>Projects</button>
+		<div class="nav-links">
+			<button class="nav-link" use:scrollTo={'home'}>Home</button>
+			<button class="nav-link" use:scrollTo={'about'}>About</button>
+			<button class="nav-link" use:scrollTo={'experience'}>Experience</button>
+			<button class="nav-link" use:scrollTo={'projects'}>Projects</button>
 		</div>
 	</div>
-</main>
+</nav>
 
 <style>
-	.menu-button,
-	.desktop,
-	.drawer {
-		background-color: var(--nav-background);
+	/* Base Navbar Container */
+	.navbar {
+		--nav-padding: 0.75rem;
+		--nav-margin: 1rem;
+		--nav-radius: 0.375rem;
+		--nav-gap: 0.5rem;
+		--backdrop-blur: 15px;
+	}
+
+	/* Shared Navbar Styles */
+	.navbar_mobile-toggle,
+	.navbar_desktop,
+	.navbar_drawer {
 		display: flex;
+		margin: 0 var(--nav-margin);
+		padding: var(--nav-padding) 0;
+		border-radius: var(--nav-radius);
+		background-color: var(--surface-glass);
+		backdrop-filter: blur(var(--backdrop-blur));
+		-webkit-backdrop-filter: blur(var(--backdrop-blur));
 		transform: translateY(1rem);
-		margin-left: 1rem;
-		margin-right: 1rem;
-		padding-top: 0.75rem;
-		padding-bottom: 0.75rem;
-		border-radius: 0.375rem;
-		-webkit-backdrop-filter: blur(15px);
-		backdrop-filter: blur(15px);
 	}
-	.menu-button {
+
+	/* Mobile Toggle */
+	.navbar_mobile-toggle {
+		justify-content: flex-end;
+		padding-right: 0.5rem;
 		touch-action: manipulation;
-		justify-content: end;
-		padding-right: 0.5rem;
 	}
-	.drawer {
-		margin-top: 0.5rem;
+
+	/* Drawer Menu */
+	.navbar_drawer {
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: var(--nav-gap);
+		margin-top: var(--nav-gap);
 	}
-	button {
-		all: unset;
-		display: inline-block;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-		padding-left: 0.75rem;
-		padding-right: 0.75rem;
-		border-radius: 0.375rem;
-	}
-	button:hover {
-		background-color: var(--tx-3);
-	}
-	.menu-button button {
-		padding-top: 0.25rem;
-		padding-right: 0.5rem;
-		padding-left: 0.5rem;
-	}
-	.drawer button {
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
-	}
-	.drawer .socials button {
-		padding-top: 0.25rem;
-		padding-bottom: 0;
-	}
-	.desktop {
+
+	/* Desktop Navigation */
+	.navbar_desktop {
 		align-items: center;
 		justify-content: space-between;
 		z-index: 1;
 	}
-	.socials {
+
+	/* Button Base Styles */
+	button {
+		all: unset;
+		display: inline-block;
+		cursor: pointer;
+		border-radius: var(--nav-radius);
+		transition: background-color 0.3s ease;
+	}
+
+	button:hover {
+		background-color: var(--tx-3);
+	}
+
+	/* Navigation Links */
+	.nav-link {
+		padding: 0.5rem 0.75rem;
+	}
+
+	.navbar_desktop .nav-link {
+		padding: 0.25rem 0.75rem;
+	}
+
+	/* Icon Buttons */
+	.icon-button {
+		padding: 0.25rem 0.5rem 0 0.5rem;
+	}
+
+	/* Social Links Container */
+	.social-links {
 		display: flex;
 		gap: 1rem;
 		margin-left: 1rem;
 	}
-	.sections {
+
+	/* Navigation Links Container */
+	.nav-links {
 		display: flex;
-		gap: 0.5rem;
+		gap: var(--nav-gap);
 		margin-right: 1rem;
 	}
-	.desktop button {
-		padding-top: 0.25rem;
-	}
-	.desktop .socials button {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-	.desktop .sections button {
-		padding-bottom: 0.25rem;
-	}
+
+	/* Link Styles */
 	a {
 		text-decoration: none;
 		color: inherit;
 		outline: none;
 	}
+
+	/* Theme Variables */
 	:root {
-		--nav-background: rgb(242, 240, 229, 0.5);
+		--surface-glass: rgb(242, 240, 229, 0.5);
 	}
+
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--nav-background: rgb(40, 39, 38, 0.5);
+			--surface-glass: rgb(40, 39, 38, 0.5);
 		}
 	}
+
+	/* Responsive Design */
 	@media (max-width: 768px) {
-		.desktop {
+		.navbar_desktop {
 			display: none;
 		}
 	}
+
 	@media (min-width: 769px) {
-		.menu-button {
-			display: none;
-		}
-		.drawer {
+		.navbar_mobile-toggle,
+		.navbar_drawer {
 			display: none;
 		}
 	}

@@ -2,43 +2,42 @@
 	const { name, image, viewbox } = $props();
 </script>
 
-<main>
+<main class="experience-card">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox={viewbox} fill="currentColor" aria-label={name}>
 		{@html image}
 	</svg>
 </main>
 
 <style>
-	main {
-		padding-left: 4rem;
-		padding-right: 4rem;
-		padding-top: 3rem;
-		padding-bottom: 3rem;
-		border-radius: 0.5rem;
-		background-color: var(--exp-background);
+	/* Experience Card */
+	.experience-card {
 		display: flex;
 		justify-content: center;
 		width: 21rem;
-	}
-	svg {
-		max-height: 200px;
-		max-width: 200px;
-		height: auto;
-		width: 40%;
-	}
-	svg {
-		fill: rgb(16, 15, 15);
+		padding: 3rem 4rem;
+		border-radius: 0.5rem;
+		background-color: var(--surface-secondary);
 	}
 
-	:root {
-		--exp-background: rgb(242, 240, 229);
+	/* Logo Styling */
+	.experience-card svg {
+		width: 40%;
+		height: auto;
+		max-width: 200px;
+		max-height: 200px;
+		fill: var(--text-primary);
 	}
+
+	/* Theme Variables */
+	:root {
+		--surface-secondary: rgb(242, 240, 229);
+		--text-primary: rgb(16, 15, 15);
+	}
+
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--exp-background: rgb(28, 27, 26);
-		}
-		svg {
-			fill: rgb(206, 205, 195);
+			--surface-secondary: rgb(28, 27, 26);
+			--text-primary: rgb(206, 205, 195);
 		}
 	}
 </style>

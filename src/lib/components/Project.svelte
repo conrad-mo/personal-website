@@ -21,54 +21,73 @@
 			.default ?? '';
 </script>
 
-<a href={link} target="_blank" rel="noopener noreferrer">
-	<enhanced:img src={selectedImage} alt={name} />
-	<div>
-		<h1>{name}</h1>
-		<h2>{description}</h2>
+<a class="project-card" href={link} target="_blank" rel="noopener noreferrer">
+	<enhanced:img class="project-card_image" src={selectedImage} alt={name} />
+	<div class="project-card_content">
+		<h3 class="project-card_title">{name}</h3>
+		<p class="project-card_description">{description}</p>
 	</div>
 </a>
 
 <style>
-	a {
-		text-decoration: none;
-		color: inherit;
-		outline: none;
-		border-radius: 0.75rem;
-		padding: 0.75rem;
-		margin-left: -0.75rem;
-		margin-right: -0.75rem;
-		max-width: 21rem;
-		transition: background-color 0.3s ease;
+	/* Project Card Container */
+	.project-card {
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		max-width: 21rem;
+		padding: 0.75rem;
+		margin: 0 -0.75rem;
+		border-radius: var(--radius-lg);
+		text-decoration: none;
+		color: inherit;
+		outline: none;
+		transition: background-color 0.3s ease;
 		box-sizing: border-box;
 	}
-	a:hover {
-		background-color: var(--hover-background);
+
+	.project-card:hover {
+		background-color: var(--surface-hover);
 	}
-	img {
-		border-radius: 0.75rem;
-		height: auto;
+
+	/* Project Image */
+	.project-card_image {
 		width: 100%;
+		height: auto;
+		border-radius: var(--radius-lg);
 	}
-	h1 {
-		font-weight: 400;
+
+	/* Content Section */
+	.project-card_content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	/* Typography */
+	.project-card_title {
 		font-size: 1.125rem;
+		font-weight: 400;
 		line-height: 1.75rem;
+		margin: 0;
+		color: var(--foreground);
 	}
-	h2 {
+
+	.project-card_description {
 		font-size: 0.875rem;
-		line-height: 1.25rem;
 		font-weight: 300;
+		line-height: 1.25rem;
+		margin: 0;
+		color: var(--tx-2);
 	}
 	:root {
-		--hover-background: rgb(230, 228, 217);
+		--radius-lg: 0.75rem;
+		--surface-hover: rgb(230, 228, 217);
 	}
+
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--hover-background: rgb(40, 39, 38);
+			--surface-hover: rgb(40, 39, 38);
 		}
 	}
 </style>
