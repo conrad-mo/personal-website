@@ -30,7 +30,6 @@
 </a>
 
 <style>
-	/* Project Card Container */
 	.project-card {
 		display: flex;
 		flex-direction: column;
@@ -50,21 +49,18 @@
 		background-color: var(--surface-hover);
 	}
 
-	/* Project Image */
 	.project-card_image {
 		width: 100%;
 		height: auto;
 		border-radius: var(--radius-lg);
 	}
 
-	/* Content Section */
 	.project-card_content {
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
 	}
 
-	/* Typography */
 	.project-card_title {
 		font-size: 1.125rem;
 		font-weight: 400;

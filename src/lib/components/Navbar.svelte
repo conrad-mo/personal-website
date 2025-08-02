@@ -128,7 +128,6 @@
 </nav>
 
 <style>
-	/* Base Navbar Container */
 	.navbar {
 		--nav-padding: 0.75rem;
 		--nav-margin: 1rem;
@@ -137,7 +136,6 @@
 		--backdrop-blur: 15px;
 	}
 
-	/* Shared Navbar Styles */
 	.navbar_mobile-toggle,
 	.navbar_desktop,
 	.navbar_drawer {
@@ -151,28 +149,24 @@
 		transform: translateY(1rem);
 	}
 
-	/* Mobile Toggle */
 	.navbar_mobile-toggle {
 		justify-content: flex-end;
 		padding-right: 0.5rem;
 		touch-action: manipulation;
 	}
 
-	/* Drawer Menu */
 	.navbar_drawer {
 		flex-direction: column;
 		gap: var(--nav-gap);
 		margin-top: var(--nav-gap);
 	}
 
-	/* Desktop Navigation */
 	.navbar_desktop {
 		align-items: center;
 		justify-content: space-between;
 		z-index: 1;
 	}
 
-	/* Button Base Styles */
 	button {
 		all: unset;
 		display: inline-block;
@@ -185,7 +179,6 @@
 		background-color: var(--tx-3);
 	}
 
-	/* Navigation Links */
 	.nav-link {
 		padding: 0.5rem 0.75rem;
 	}
@@ -194,33 +187,28 @@
 		padding: 0.25rem 0.75rem;
 	}
 
-	/* Icon Buttons */
 	.icon-button {
 		padding: 0.25rem 0.5rem 0 0.5rem;
 	}
 
-	/* Social Links Container */
 	.social-links {
 		display: flex;
 		gap: 1rem;
 		margin-left: 1rem;
 	}
 
-	/* Navigation Links Container */
 	.nav-links {
 		display: flex;
 		gap: var(--nav-gap);
 		margin-right: 1rem;
 	}
 
-	/* Link Styles */
 	a {
 		text-decoration: none;
 		color: inherit;
 		outline: none;
 	}
 
-	/* Theme Variables */
 	:root {
 		--surface-glass: rgb(242, 240, 229, 0.5);
 	}
@@ -231,7 +219,6 @@
 		}
 	}
 
-	/* Responsive Design */
 	@media (max-width: 768px) {
 		.navbar_desktop {
 			display: none;

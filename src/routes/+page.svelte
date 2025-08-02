@@ -199,18 +199,15 @@
 </section>
 
 <style>
-	/* Layout */
 	:root {
 		display: flex;
 		flex-direction: column;
 
-		/* Spacing Variables */
 		--section-padding-sm: 1.5rem;
 		--section-padding-md: 2rem;
 		--section-padding-lg: 4rem;
 		--section-padding-xl: 8rem;
 
-		/* Typography Scale */
 		--text-sm: 0.875rem;
 		--text-base: 1rem;
 		--text-lg: 1.5rem;
@@ -220,7 +217,6 @@
 		--text-4xl: 4rem;
 		--text-5xl: 6rem;
 
-		/* Spacing Scale */
 		--space-xs: 0.25rem;
 		--space-sm: 0.5rem;
 		--space-md: 1rem;
@@ -229,11 +225,9 @@
 		--space-2xl: 3rem;
 		--space-3xl: 4rem;
 
-		/* Border */
 		--border-color: var(--tx-3);
 	}
 
-	/* Navbar Container */
 	.navbar-container {
 		position: fixed;
 		top: 0;
@@ -242,7 +236,6 @@
 		max-height: 0;
 	}
 
-	/* Base Section Styles */
 	.section {
 		min-height: 100vh;
 		display: flex;
@@ -253,7 +246,6 @@
 		padding: 0 var(--section-padding-sm);
 	}
 
-	/* Section Title */
 	.section_title {
 		font-size: var(--text-2xl);
 		font-weight: 300;
@@ -266,7 +258,6 @@
 		font-size: var(--text-4xl);
 	}
 
-	/* Home Section */
 	.section--home {
 		gap: var(--space-xl);
 	}
@@ -289,7 +280,6 @@
 		margin: 0;
 	}
 
-	/* About Section */
 	.section--about {
 		flex-direction: column-reverse;
 		align-items: center;
@@ -324,7 +314,6 @@
 		transform: translateY(2rem);
 	}
 
-	/* Experience Section */
 	.section--experience {
 		align-items: center;
 		padding: 0 var(--section-padding-lg);
@@ -338,7 +327,6 @@
 		width: 100%;
 	}
 
-	/* Projects Section */
 	.section--projects {
 		padding-bottom: 10rem;
 	}
@@ -354,7 +342,6 @@
 		gap: var(--space-lg);
 	}
 
-	/* Responsive Design */
 	@media (max-width: 639px) {
 		.section--experience {
 			padding: 0 var(--space-2xl);

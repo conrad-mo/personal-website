@@ -9,7 +9,6 @@
 </main>
 
 <style>
-	/* Experience Card */
 	.experience-card {
 		display: flex;
 		justify-content: center;
@@ -19,7 +18,6 @@
 		background-color: var(--surface-secondary);
 	}
 
-	/* Logo Styling */
 	.experience-card svg {
 		width: 40%;
 		height: auto;
@@ -28,7 +26,6 @@
 		fill: var(--text-primary);
 	}
 
-	/* Theme Variables */
 	:root {
 		--surface-secondary: rgb(242, 240, 229);
 		--text-primary: rgb(16, 15, 15);
