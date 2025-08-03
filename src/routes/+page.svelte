@@ -17,7 +17,7 @@
 
 <section
 	use:scrollRef={'home'}
-	class="section section--home"
+	class="section section-home"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		homeVisible = true;
@@ -38,7 +38,7 @@
 
 <section
 	use:scrollRef={'about'}
-	class="section section--about"
+	class="section section-about"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		aboutVisible = true;
@@ -71,14 +71,14 @@
 
 <section
 	use:scrollRef={'experience'}
-	class="section section--experience"
+	class="section section-experience"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		expsVisible = true;
 	}}
 >
 	{#if expsVisible}
-		<h2 class="section_title section_title--large" transition:fly={{ y: 200, duration: 500 }}>
+		<h2 class="section_title section_title-large" transition:fly={{ y: 200, duration: 500 }}>
 			Experiences
 		</h2>
 		<div class="experience_list" transition:fly={{ delay: 150, y: 200, opacity: 0, duration: 500 }}>
@@ -118,7 +118,7 @@
 
 <section
 	use:scrollRef={'projects'}
-	class="section section--projects"
+	class="section section-projects"
 	use:inview={{ threshold: 0.5 }}
 	oninview_enter={() => {
 		projectsVisible = true;
@@ -254,11 +254,11 @@
 		color: var(--foreground);
 	}
 
-	.section_title--large {
+	.section_title-large {
 		font-size: var(--text-4xl);
 	}
 
-	.section--home {
+	.section-home {
 		gap: var(--space-xl);
 	}
 
@@ -280,7 +280,7 @@
 		margin: 0;
 	}
 
-	.section--about {
+	.section-about {
 		flex-direction: column-reverse;
 		align-items: center;
 		gap: var(--space-md);
@@ -314,7 +314,7 @@
 		transform: translateY(2rem);
 	}
 
-	.section--experience {
+	.section-experience {
 		align-items: center;
 		padding: 0 var(--section-padding-lg);
 	}
@@ -327,11 +327,11 @@
 		width: 100%;
 	}
 
-	.section--projects {
+	.section-projects {
 		padding-bottom: 10rem;
 	}
 
-	.section--projects .section_title {
+	.section-projects .section_title {
 		margin-top: 6rem;
 	}
 
@@ -343,17 +343,17 @@
 	}
 
 	@media (max-width: 639px) {
-		.section--experience {
+		.section-experience {
 			padding: 0 var(--space-2xl);
 		}
 
-		.section--experience .section_title--large {
+		.section-experience .section_title-large {
 			font-size: var(--text-xl);
 		}
 	}
 
 	@media (max-width: 499px) {
-		.section--experience {
+		.section-experience {
 			padding: 0 var(--space-2xl);
 		}
 	}
@@ -363,7 +363,7 @@
 			padding: 0 var(--section-padding-xl);
 		}
 
-		.section--home {
+		.section-home {
 			gap: var(--space-2xl);
 		}
 
@@ -375,7 +375,7 @@
 			font-size: var(--text-lg);
 		}
 
-		.section--experience {
+		.section-experience {
 			padding: 0 var(--section-padding-md);
 		}
 	}
@@ -390,7 +390,7 @@
 			font-size: var(--text-4xl);
 		}
 
-		.section--about {
+		.section-about {
 			flex-direction: row;
 			gap: var(--space-2xl);
 		}
@@ -405,12 +405,12 @@
 			padding: 0 var(--section-padding-xl);
 		}
 
-		.section--about {
+		.section-about {
 			padding: 0 var(--section-padding-lg);
 			gap: 10rem;
 		}
 
-		.section--experience {
+		.section-experience {
 			padding: 0 var(--space-2xl);
 		}
 
@@ -418,7 +418,7 @@
 			--image-size: 300px;
 		}
 
-		.section--projects {
+		.section-projects {
 			align-items: flex-start;
 		}
 
@@ -432,11 +432,11 @@
 	}
 
 	@media (min-width: 1280px) {
-		.section--about {
+		.section-about {
 			padding: 0 var(--section-padding-xl);
 		}
 
-		.section--experience {
+		.section-experience {
 			padding: 0 5rem;
 		}
 
@@ -450,7 +450,7 @@
 	}
 
 	@media (min-width: 1536px) {
-		.section--about {
+		.section-about {
 			padding: 0 16rem;
 		}
 
